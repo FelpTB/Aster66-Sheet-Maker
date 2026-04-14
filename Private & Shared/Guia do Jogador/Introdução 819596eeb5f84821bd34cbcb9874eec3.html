@@ -1,0 +1,745 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Introdução</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="819596ee-b5f8-4821-bd34-cbcb9874eec3" class="page sans"><header><h1 class="page-title" dir="auto">Introdução</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="187e66c8-f973-806d-8e5f-edf75cb5d4da" class="">Descrição</h2></div><div style="display:contents" dir="auto"><p id="183e66c8-f973-80ac-8988-d9f2b4d52e8b" class="">A ideia do sistema é que o sistema seja simples o suficiente para poder ser jogado por qualquer jogador iniciante mas que ofereça um certo nível de complexidade para divertir até os jogadores mais experientes, com base nisso, o sistema possui uma mecânica simples de atributos e uma mecânica de habilidades bem variada o que cria diversas possibilidades na hora de preparar seu personagem, para o combate ou para o RP no geral.</p></div><div style="display:contents" dir="auto"><h2 id="183e66c8-f973-8099-b511-daaa0c7612c2" class="">Atributos</h2></div><div style="display:contents" dir="auto"><p id="183e66c8-f973-80d4-9915-c13dac7ddf12" class="">Os atributos são a base do sistema, é o que irá definir as capacidades dos personagens jogáveis bem como dos não jogáveis, em resumo esses atributos definem desde o dano causado por um ataque durante uma luta até as vantagens que um jogador terá ao realizar um teste. Dentro desse sistema existem seis atributos diferentes cada um abstraindo um tipo de capacidade diferente que os personagens podem ter dentro do sistema, são eles:</p></div><div style="display:contents" dir="auto"><h3 id="187e66c8-f973-8020-9915-f229c52b7e38" class=""><strong>Corpo</strong></h3></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-80be-80df-ea513a7bc42f" class="">O atributo Corpo representa as capacidades físicas naturais de um personagem, como força, resistência, constituição e outros aspectos relacionados ao físico. Pense no Corpo como o <strong>hardware</strong>, a parte física que interage diretamente com o mundo ao seu redor. Ele é influenciado por sua Mente e Alma, mas tem seu próprio funcionamento único, responsável pelas ações físicas que um personagem pode realizar.</p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8085-86ef-e9e8d8c89d74" class=""><strong>Impacto em um personagem com alto Corpo:</strong></p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8087-aed7-cc937c50b7c7" class="">Um personagem com Corpo muito elevado é capaz de feitos sobre-humanos, como erguer grandes pesos, resistir a ferimentos graves e suportar condições extremas. Ele se destaca em combates físicos, exalando força bruta e durabilidade impressionantes. Para fora de combate um personagem com muito Corpo é excelente em testes que envolvam aptidão física ou confiança nos sentidos.</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8034-884b-cc893a6a48ca" class=""><strong>Mecânicas Relacionadas:</strong></p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8006-92d8-f201d16a670f" class="">O atributo Corpo influência diretamente na quantidade de vida que o personagem terá, tanto o atributo inicial quanto o adquirido por treinamentos são aumentados pelo modificador de Corpo.</p></div><div style="display:contents" dir="auto"><h3 id="187e66c8-f973-802a-b8d9-fd464d5c1659" class=""><strong>Mente</strong></h3></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8022-a083-c14da571de6a" class="">A Mente reflete as capacidades mentais do personagem, incluindo raciocínio, inteligência, tomada de decisões e a habilidade de aprender e reter conhecimentos. Funciona como o <strong>software</strong> do personagem, guiando suas escolhas e definindo como ele interage com o mundo. É a Mente que interpreta e canaliza energias, transformando-as em ações ou estratégias que o Corpo executa.</p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-809f-a94c-cadb167b7117" class=""><strong>Impacto em um personagem com alta Mente:</strong></p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-802a-968a-ee3b96eacc2b" class="">Com uma Mente altamente desenvolvida, o personagem é um estrategista brilhante, capaz de resolver problemas complexos rapidamente e compreender situações complicadas em segundos. Para além disso um personagem com muita Mente tem maestria em lidar com situações que exijam tato social e interpretação.</p></div><div style="display:contents" dir="auto"><hr id="187e66c8-f973-8071-9667-ccfbfd5f2e7d"/></div><div style="display:contents" dir="auto"><h3 id="187e66c8-f973-801e-a0d7-e6816086341e" class=""><strong>Alma</strong></h3></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8093-bed5-f91e5b1a8970" class="">A Alma representa a essência vital de um personagem, sua energia interior e sua conexão com o que é espiritual ou esotérico. Ela é a base de habilidades como intuição, sexto sentido e sensibilidade mágica. A Alma é aquilo que te mantém vivo, a <strong>energia que move o ser</strong>, diferenciando o que está vivo do que não está. É algo que não pode ser explicado totalmente, mas é sentido e experimentado.</p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-80b1-90ea-fd1585ab36fe" class=""><strong>Impacto em um personagem com alta Alma:</strong></p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-80c4-ac6a-e605d0ed5093" class="">Um personagem com Alma elevada é um farol de energia espiritual, sendo capaz de sentir presenças e fenômenos mágicos com extrema clareza. Ele pode se comunicar com entidades espirituais, realizar rituais poderosos e ser um canal perfeito para magia pura. Sua intuição o torna quase impossível de enganar.</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8058-8828-c1793e4b577d" class=""><strong>Mecânicas Relacionadas:</strong></p></div><div style="display:contents" dir="auto"><p id="335e66c8-f973-8056-8dd5-d24a567ac436" class="">O atributo Alma influência diretamente na quantidade de energia do personagem, tanto o atributo inicial quanto o adquirido por treinamentos são aumentados pelo modificador de Alma.</p></div><div style="display:contents" dir="auto"><hr id="187e66c8-f973-80c7-b2ed-c525726e5dc0"/></div><div style="display:contents" dir="auto"><h3 id="187e66c8-f973-80ca-8e2a-cce43c0b9097" class="">Destreza</h3></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8007-803e-d7f16ef244e8" class="">A Destreza mede o quão bem o personagem consegue realizar ações físicas treinadas. Esse atributo abrange reflexos, precisão e habilidade no uso de armas ou ferramentas. Ele representa o <strong>controle racional da Mente sobre o Corpo</strong>, onde movimentos são feitos com eficiência e precisão, quase como o funcionamento de uma máquina biológica.</p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8072-85e0-cd74b7265270" class=""><strong>Impacto em um personagem com alta </strong>Aptidão<strong>:</strong></p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-804a-946f-e5fd561f0d29" class="">Um personagem extremamente habilidoso é quase imbatível em combate técnico. Seus reflexos são rápidos, sua mira é impecável, e seus movimentos são perfeitos. Tudo isso torna o personagem muito útil, dentro e fora de combate.</p></div><div style="display:contents" dir="auto"><p id="335e66c8-f973-801f-96d5-cf19579b801d" class=""><strong>Mecânicas Relacionadas:</strong></p></div><div style="display:contents" dir="auto"><p id="335e66c8-f973-8064-a0ee-fd0c96dd1cd3" class="">O atributo Destreza influência diretamente na quantidade de reações do usuário e no valor de seu atributo de esquiva. O valor do modificador de destreza é somado ao atributo de esquiva. Enquanto o número de reações básicas do personagem aumenta de acordo com a proporção abaixo:</p></div><div style="display:contents" dir="ltr"><table id="335e66c8-f973-8089-83bd-c3641bcf5f14" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="335e66c8-f973-8067-adf7-ed9e34deb421"><td id="txxj" class="" style="width:145.65625px">Valor de Destreza</td><td id="aK=u" class="" style="width:179.65625px">Número de Reações</td></tr></div><div style="display:contents" dir="ltr"><tr id="335e66c8-f973-8083-af46-dd46a2f03141"><td id="txxj" class="" style="width:145.65625px">0</td><td id="aK=u" class="" style="width:179.65625px">1</td></tr></div><div style="display:contents" dir="ltr"><tr id="335e66c8-f973-80d4-a1dd-c8e589a62515"><td id="txxj" class="" style="width:145.65625px">1</td><td id="aK=u" class="" style="width:179.65625px">2</td></tr></div><div style="display:contents" dir="ltr"><tr id="335e66c8-f973-806b-8929-e66b5fd47d7d"><td id="txxj" class="" style="width:145.65625px">2</td><td id="aK=u" class="" style="width:179.65625px">2</td></tr></div><div style="display:contents" dir="ltr"><tr id="335e66c8-f973-8078-bc2b-e379bf13c253"><td id="txxj" class="" style="width:145.65625px">3</td><td id="aK=u" class="" style="width:179.65625px">3</td></tr></div><div style="display:contents" dir="ltr"><tr id="335e66c8-f973-80e6-b4a2-c09d0cc6e334"><td id="txxj" class="" style="width:145.65625px">4</td><td id="aK=u" class="" style="width:179.65625px">3</td></tr></div><div style="display:contents" dir="ltr"><tr id="335e66c8-f973-8093-af77-fd0c2dccb9d6"><td id="txxj" class="" style="width:145.65625px">5</td><td id="aK=u" class="" style="width:179.65625px">4</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="335e66c8-f973-8040-b491-ff9fd06d1af9" class="">Para valores ausentes da tabela pode se considerar a lógica de que a cada 2 de destreza aumenta-se o número de reações em +1.</p></div><div style="display:contents" dir="auto"><hr id="187e66c8-f973-8021-9d93-d738d71899ba"/></div><div style="display:contents" dir="auto"><h3 id="187e66c8-f973-80ba-8f24-e70c9c76dd0a" class=""><strong>Conhecimento</strong></h3></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-80fd-ab08-ed0e80380382" class="">Conhecimento diz respeito ao que o personagem aprendeu ao longo de sua vida, seja por estudo, prática ou experiências. Esse atributo representa as <strong>memórias e aprendizados acumulados</strong> que moldam a personalidade e a capacidade de resolver problemas. Conhecimento permite que o personagem aplique o que sabe de maneira prática, seja compreendendo o funcionamento de magias ou decifrando enigmas.</p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8044-8417-eca3f057ab35" class=""><strong>Impacto em um personagem com alto Conhecimento:</strong></p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-80e8-9ef2-ea05eb596c6a" class="">Com Conhecimento elevado, o personagem é uma enciclopédia viva, compreendendo desde os mais antigos segredos mágicos até os detalhes mais complexos de uma situação. Ele se torna um guia valioso que consegue usar o conhecimento do passado para resolver situações futuras bem, seja isso dentro ou fora de combate. Num geral esse atributo está mais relacionado a momentos de exploração e interação com o mundo.</p></div><div style="display:contents" dir="auto"><hr id="187e66c8-f973-80c3-807f-d12219fd4ff8"/></div><div style="display:contents" dir="auto"><h3 id="187e66c8-f973-80ef-9eb3-e1183da9cbd3" class=""><strong>Foco</strong></h3></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-80ef-ba99-fbf26a5a18d3" class="">Foco é a capacidade de concentração e direcionamento de energia do personagem. Esse atributo reflete a habilidade de manter o controle emocional, exercer vontade, canalizar crenças ou manipular a magia de forma precisa. Pense no Foco como a habilidade de <strong>silenciar distrações externas e internas</strong>, conectando diretamente o Corpo e a Alma. Ele representa aquele estado de concentração máxima em que o personagem ignora o caos ao redor e age com clareza e propósito.</p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-80de-ab93-dc5630940e2e" class=""><strong>Impacto em um personagem com alto Foco:</strong></p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-80b7-98c5-c4a896c8f53b" class="">Um personagem com Foco elevado é imperturbável. Ele mantém o controle absoluto de suas emoções, transforma sua força de vontade em um recurso inesgotável e é capaz de realizar feitos extraordinários por pura determinação. Na magia, ele canaliza energias de forma precisa e poderosa, tornando-se um mestre em manipular sua própria essência e alcançar estados de concentração quase sobre-humanos.</p></div><div style="display:contents" dir="auto"><h2 id="187e66c8-f973-805a-b8c9-cf3d87e0ccd8" class="">Explicação</h2></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8047-8afd-cb1828a55a8d" class="">Num resumo geral temos três atributos básicos, Corpo, Mente, Alma, que representam algo natural, algo que se nasce com e é aprimorado por diversos tipos de treinamentos, estudos ou experiências ao longo da vida e além disso temos mais três atributos, Destreza, Conhecimento, Foco que representam capacidades relacionadas aos três atributos básicos mas que ao contrario deles não é algo que se nasce com e sim que se desenvolve ao longo da vida. </p></div><div style="display:contents" dir="auto"><h2 id="187e66c8-f973-8017-9b12-dbc2354fde74" class="">Passando em um teste</h2></div><div style="display:contents" dir="auto"><p id="335e66c8-f973-8062-9ea8-c1882e878f34" class="">Para ser bem sucedido em um teste, o valor final dos dados deve ser igual ou superior a um nível de dificuldade definido pelo mestre para aquele teste. por exemplo um teste com nível de dificuldade igual a 12 é superado caso o jogador consiga nos dados (+ modificador caso escolha a segunda opção) um resultado igual ou superior a 12. Na hora de definir a dificuldade de um teste é de suma importância que a chance de um personagem passar no teste com os dados reflita a chance que ele teria de superar a situação do teste com suas capacidades, isso é algo que o mestre decide baseado em suas opiniões e experiencias mas para facilitar um pouco o trabalho pode-se consultar as tabelas abaixo e alguns exemplos.</p></div><div style="display:contents" dir="auto"><h2 id="187e66c8-f973-8046-beeb-d95e51679af7" class="">Escolhendo o atributo da rolagem</h2></div><div style="display:contents" dir="auto"><p id="183e66c8-f973-80d3-bb86-e835cb1690c1" class="">Para além dos significados por trás dos atributos é necessário abordar como eles funcionam para dentro do sistema de jogo, basicamente eles definem capacidades que um personagem usa para realizar uma ação, ao contrário de outros sistemas onde essa relação ocorre de forma definida, onde atributos específicos empenham papéis específicos, nesse sistema a ideia é que, limitado apenas pela criatividade, o jogador possa usar de qualquer atributo para realizar qualquer teste.</p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8052-9b44-ece6421fbf62" class=""><em><mark class="highlight-yellow">Exemplo: Um teste de intimidação, é possível usar desde o atributo Conhecimento para utilizar técnicas interpessoais, usar o atributo Corpo com o objetivo de intimidar alguém com seu corpo repleto de músculos, ou até, usar o atributo Habilidade e mostrar truques sinistros com um objeto cortante.</mark></em></p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8089-b06e-cb73f08343a6" class="">Com isso em mente, cabe apenas ao jogador pensar em método e justificá-lo enquanto o mestre tem a última palavra para aceitar, ou não, a ideia. </p></div><div style="display:contents" dir="auto"><h2 id="187e66c8-f973-805d-aada-c9f85ecb6eab" class="">Aplicando atributos</h2></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8016-bdce-c904a75a7427" class="">Além dos atributos algo importante é definir como eles serão aplicados. Em D&amp;D isso ocorre por meio de modificadores em testes de D20,  em Ordem Paranormal acontece um aumento no número de dados jogados. Neste sistema, o que acontece é uma união desses dois métodos, ao realizar um teste, os dados rolados são dois D6, após isso o jogador pode escolher entre:</p></div><div style="display:contents" dir="auto"><h3 id="188e66c8-f973-8075-a626-e116eba7a062" class="">Aplicações:</h3></div><div style="display:contents" dir="auto"><p id="183e66c8-f973-80fa-8c4a-f70270ca18a8" class=""><strong>1- Jogar novamente os dados até o número equivalente ao modificador do atributo.</strong> </p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-80c3-b363-dda079082e87" class=""><mark class="highlight-yellow">Exemplo: O jogador possui </mark><mark class="highlight-teal"><strong>+2</strong></mark><mark class="highlight-yellow"><strong> </strong></mark><mark class="highlight-yellow">de</mark><mark class="highlight-yellow"><strong> Corpo</strong></mark><mark class="highlight-yellow"> e irá tentar levantar uma grande pedra apenas contando com sua força física, ao realizar o teste, ele poderá mudar o resultado de até </mark><mark class="highlight-teal"><strong>2 dados.</strong></mark><em><mark class="highlight-yellow">(Podendo mudar o resultado do mesmo dado mais de uma vez)</mark></em></p></div><div style="display:contents" dir="auto"><p id="183e66c8-f973-80a9-9837-d4db17ef16f1" class=""><strong>2- Aceitar o resultado dos dados e somar o modificador do atributo. </strong></p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8043-921a-f2f27ede88ef" class=""><mark class="highlight-yellow">Exemplo: O jogador possui </mark><mark class="highlight-teal">+2</mark><mark class="highlight-yellow"> de </mark><mark class="highlight-yellow"><strong>Mente</strong></mark><mark class="highlight-yellow"> e irá tentar resolver um cubo mágico contando apenas com seu raciocínio, ao realizar um teste e escolher essa opção, ele irá somar </mark><mark class="highlight-teal">+2</mark><mark class="highlight-yellow"> ao resultado final do dos dados.</mark><em><mark class="highlight-yellow">(</mark></em><em><mark class="highlight-gray">Caso ele tire algo 4 e 5 a soma final será (nesse caso) 11. (4+5+2)</mark></em><em><mark class="highlight-yellow">)</mark></em></p></div><div style="display:contents" dir="auto"><p id="187e66c8-f973-8096-bd46-e1aa93615bf1" class="">Ambas as escolhas podem ser aplicadas ao mesmo teste, antes de aceitar o resultado o jogador pode rodar novamente os dados quantas vezes for possível.</p></div><div style="display:contents" dir="auto"><h3 id="188e66c8-f973-805f-9e93-f69e804aa3ae" class="">Vantagens:</h3></div><div style="display:contents" dir="auto"><p id="335e66c8-f973-80cb-98b5-e12742d7a76f" class="">Algumas situações podem levar o mestre a definir que o jogador tenha vantagem em um teste, seja por uma ação anterior que facilita aquela processo ou até por uma habilidade do jogador que descreva essa vantagem. Em caso de rolagens com vantagem, o jogador pode rodar outro 1d6 (Além dos 2d6 usuais) o valor desse dado é somado ao resultado final do teste.</p></div><div style="display:contents" dir="auto"><h3 id="335e66c8-f973-8009-8318-e5885a02fbd4" class="">Testes em Conjunto:</h3></div><div style="display:contents" dir="auto"><p id="335e66c8-f973-8031-aa64-d72b3ff49ab7" class="">Caso dois personagens decidam auxiliarem um ao outro em um teste a dificuldade deve ser adaptada para o esforço de dois personagens. Nesses casos cada jogador realiza um teste com 1d6 somando os modificadores normalmente, o valor somado dos resultados de cada jogador é o valor final do teste.</p></div><div style="display:contents" dir="auto"><h3 id="187e66c8-f973-8002-9033-c9a6ec3b8449" class="">Tabela de valores de dois D6</h3></div><div style="display:contents" dir="ltr"><table id="187e66c8-f973-805c-acce-edc209f9ddbd" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80f9-89ff-e91a1f4f3600"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">Valor do Resultado</mark></th><th id="wAIH" class="simple-table-header-color simple-table-header" style="width:162.9499969482422px"><mark class="highlight-gray">Probabilidade de Ocorrer</mark></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-8086-87aa-d1585dad9ffa"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">2</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">2.7%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-800b-8bf8-e3bc10894f51"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">3</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">5.4%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-8008-80db-c6ab4fccf3a0"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">4</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">8.1%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-8069-9821-eae01617b6b6"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">5</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">10.8%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80a7-b207-e115b2d412f8"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">6</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">13.5%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-8018-8f4c-e96fdfcfb16d"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">7</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">16.2%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80db-8737-cb53ffcb2cee"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">8</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">13.5%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80bf-8529-d750f3794423"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">9</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">10.8%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-801d-9fc5-de95bdfed3ee"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">10</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">8.1%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80c6-be83-ccfb34af53d6"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">11</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">5.4%</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80b9-8578-ca84f9e80290"><th id="a&gt;|v" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">12</mark></th><td id="wAIH" class="" style="width:162.9499969482422px">2.7%</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="187e66c8-f973-80c8-9241-d92e063e435c" class="">Tabela de níveis de dificuldade</h3></div><div style="display:contents" dir="ltr"><table id="187e66c8-f973-8057-93e9-fe6b66941048" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80a0-b984-d25dd63f2c2f"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-gray">Nível de Dificuldade</mark></th><th id="MBUo" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">Chance de Sucesso</mark></th><th id="mN[N" class="simple-table-header-color simple-table-header"><mark class="highlight-gray">Dificuldade</mark></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80e5-ba8c-fc345485c431"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-purple">1-</mark></th><td id="MBUo" class=""><mark class="highlight-purple">100%</mark></td><td id="mN[N" class=""><mark class="highlight-purple">Sucesso automático</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80d7-bcad-f92f90fa0af4"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-purple">2</mark></th><td id="MBUo" class=""><mark class="highlight-purple">100%</mark></td><td id="mN[N" class=""><mark class="highlight-purple">Sucesso automático</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80cc-b82f-e8f8335c2ee3"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-blue">3</mark></th><td id="MBUo" class=""><mark class="highlight-blue">97%</mark></td><td id="mN[N" class=""><mark class="highlight-blue">Extremamente Fácil</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-808b-8ec5-fc69d0102591"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-blue">4</mark></th><td id="MBUo" class=""><mark class="highlight-blue">91%</mark></td><td id="mN[N" class=""><mark class="highlight-blue">Extremamente Fácil</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80c3-ac98-cdcf206aa9e2"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-teal">5</mark></th><td id="MBUo" class=""><mark class="highlight-teal">82%</mark></td><td id="mN[N" class=""><mark class="highlight-teal">Muito Fácil</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80ea-a4af-f36131a1b617"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-teal">6</mark></th><td id="MBUo" class=""><mark class="highlight-teal">72%</mark></td><td id="mN[N" class=""><mark class="highlight-teal">Fácil</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-8023-9a1c-fa978dc15874"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px">7</th><td id="MBUo" class="">60%</td><td id="mN[N" class="">Médio</td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80c5-bb53-f9b1b38c60e5"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-yellow">8</mark></th><td id="MBUo" class=""><mark class="highlight-yellow">40%</mark></td><td id="mN[N" class=""><mark class="highlight-yellow">Difícil</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80fd-81c1-fccbb8743777"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-yellow">9</mark></th><td id="MBUo" class=""><mark class="highlight-yellow">30%</mark></td><td id="mN[N" class=""><mark class="highlight-yellow">Difícil</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-8013-b80e-d4851c0c6455"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-orange">10</mark></th><td id="MBUo" class=""><mark class="highlight-orange">20%</mark></td><td id="mN[N" class=""><mark class="highlight-orange">Muito Difícil</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80fe-8e16-e193cac88f7f"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-red">11</mark></th><td id="MBUo" class=""><mark class="highlight-red">10%</mark></td><td id="mN[N" class=""><mark class="highlight-red">Extremamente Difícil</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-805e-95eb-ef3d2f60e0c1"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-red">12</mark></th><td id="MBUo" class=""><mark class="highlight-red">3%</mark></td><td id="mN[N" class=""><mark class="highlight-red">Quase impossível</mark></td></tr></div><div style="display:contents" dir="ltr"><tr id="187e66c8-f973-80cc-af53-fd799f0d9780"><th id="oQ{~" class="simple-table-header-color simple-table-header" style="width:150.58750915527344px"><mark class="highlight-pink">13+</mark></th><td id="MBUo" class=""><mark class="highlight-pink">0%</mark></td><td id="mN[N" class=""><mark class="highlight-pink">Impossível</mark></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="187e66c8-f973-80d9-bba2-ee4619e8e5aa" class="">Exemplos de dificuldade</h3></div><div style="display:contents" dir="auto"><p id="188e66c8-f973-80cf-bcd7-cb9d6b2530b5" class=""><strong>Corpo:</strong></p></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8083-abc7-e3d8ecb6a6fa" class="bulleted-list"><li style="list-style-type:disc"><strong>Sucesso Automático</strong>: Levantar uma mochila leve ou dar um soco em um saco de areia.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-806c-97b4-e40ef07b75d6" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Fácil</strong>: Correr uma curta distância sem se cansar ou pular sobre um pequeno obstáculo.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-802c-ba9a-d7aa4d69ffa1" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Fácil</strong>: Carregar um objeto de tamanho médio, como um barril, ou saltar por cima de uma cerca baixa.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8086-b1a9-ec5bd66f2a6f" class="bulleted-list"><li style="list-style-type:disc"><strong>Fácil</strong>: Escalar uma parede de dificuldade moderada ou resistir a um soco direto.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80b6-aa21-d176a96f4589" class="bulleted-list"><li style="list-style-type:disc"><strong>Médio</strong>: Carregar uma pessoa ferida por uma longa distância ou nadar contra uma corrente fraca.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-802a-be07-e1b524964197" class="bulleted-list"><li style="list-style-type:disc"><strong>Difícil</strong>: Derrubar uma porta robusta com força bruta ou lutar em combate prolongado sem se exaurir.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-806e-b7a2-cce800893840" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Difícil</strong>: Levantar algo extremamente pesado, como uma grande rocha, ou resistir a uma explosão de impacto moderado.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-809d-83b1-d78672d791a2" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Difícil</strong>: Escalar um penhasco íngreme com pouca ou nenhuma segurança ou sobreviver a um golpe devastador com ferimentos leves.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80f2-8f07-f2651eb9152f" class="bulleted-list"><li style="list-style-type:disc"><strong>Quase Impossível</strong>: Erguer um portão metálico sozinho ou suportar um veneno letal apenas com resistência natural.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80aa-a730-fe62c82e858f" class="bulleted-list"><li style="list-style-type:disc"><strong>Impossível</strong>: Rasgar correntes de ferro com as mãos ou suportar a queda de uma grande rocha sobre o corpo.</li></ul></div><div style="display:contents" dir="auto"><hr id="188e66c8-f973-80f0-aef4-c9fb354b03f2"/></div><div style="display:contents" dir="auto"><p id="188e66c8-f973-80ea-b131-c6665f63cb44" class=""><strong>Mente</strong></p></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80e7-bb4d-f9d28444ad97" class="bulleted-list"><li style="list-style-type:disc"><strong>Sucesso Automático</strong>: Fazer cálculos simples mentalmente, como somar números pequenos.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-800c-aa1c-cab30861958a" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Fácil</strong>: Lembrar-se de informações básicas aprendidas recentemente.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80c9-bea7-dc4b79c204a5" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Fácil</strong>: Solucionar um quebra-cabeça lógico básico.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8051-8c0b-d240edc7c05b" class="bulleted-list"><li style="list-style-type:disc"><strong>Fácil</strong>: Formular um plano simples para escapar de uma situação complicada.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8046-86fc-d25a0023723e" class="bulleted-list"><li style="list-style-type:disc"><strong>Médio</strong>: Compreender um texto técnico complexo com tempo para análise.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80fb-92c9-fd25505d99a3" class="bulleted-list"><li style="list-style-type:disc"><strong>Difícil</strong>: Criar uma estratégia eficiente sob pressão intensa.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-807a-9248-cd4c435b2c97" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Difícil</strong>: Resolver um problema lógico de múltiplas etapas em tempo limitado.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80e0-ab30-d4c84f55b07b" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Difícil</strong>: Desvendar um enigma elaborado que combina conhecimentos diversos.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80a0-95b0-f98be8cd6dfe" class="bulleted-list"><li style="list-style-type:disc"><strong>Quase Impossível</strong>: Inventar uma solução inovadora para um problema nunca antes resolvido.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8017-a56a-f35a9dd87bb8" class="bulleted-list"><li style="list-style-type:disc"><strong>Impossível</strong>: Processar um volume gigantesco de informações simultaneamente ou decifrar instantaneamente uma linguagem ou código completamente desconhecido sem recursos mágicos.</li></ul></div><div style="display:contents" dir="auto"><hr id="188e66c8-f973-807b-981e-f14627f5d62c"/></div><div style="display:contents" dir="auto"><p id="188e66c8-f973-8053-abae-eaf51394e7f4" class=""><strong>Alma</strong></p></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80a4-8641-d0df14d0bd59" class="bulleted-list"><li style="list-style-type:disc"><strong>Sucesso Automático</strong>: Sentir mudanças sutis de energia no ambiente, como uma leve presença mágica.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80ee-b3d0-d3342ee9aba6" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Fácil</strong>: Intuir se há algo de estranho ou incomum em uma situação.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-809c-a79d-e507a411c581" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Fácil</strong>: Perceber a aura de um objeto ou pessoa próxima.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8072-ba03-e1e6ee71863c" class="bulleted-list"><li style="list-style-type:disc"><strong>Fácil</strong>: Detectar magia ativa em uma área visível.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8006-a33b-f4d00308f193" class="bulleted-list"><li style="list-style-type:disc"><strong>Médio</strong>: Comunicar-se com um espírito ou energia esotérica amigável.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80f4-98ef-d29e5786e7f0" class="bulleted-list"><li style="list-style-type:disc"><strong>Difícil</strong>: Reconhecer magia poderosa ou escondida em um ambiente caótico.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80c9-adad-f3754c93a3a0" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Difícil</strong>: Resistir a uma maldição ou efeito espiritual negativo sem ajuda externa.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8058-98b4-f8ec564cca03" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Difícil</strong>: Canalizar energia de outra dimensão sem riscos graves ou erros.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8092-998a-f6149ef433a7" class="bulleted-list"><li style="list-style-type:disc"><strong>Quase Impossível</strong>: Alcançar uma conexão direta e perfeita com uma entidade ou força superior.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8008-81b7-caa089efcbb0" class="bulleted-list"><li style="list-style-type:disc"><strong>Impossível</strong>: Abrir um portal para outro plano espiritual ou dominar completamente uma entidade poderosa.</li></ul></div><div style="display:contents" dir="auto"><hr id="188e66c8-f973-8057-a7fa-e438d8489ad0"/></div><div style="display:contents" dir="auto"><h3 id="188e66c8-f973-80cf-9eba-cffacf1a0056" class="">Destreza</h3></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8014-b8ed-cb74c4d07533" class="bulleted-list"><li style="list-style-type:disc"><strong>Sucesso Automático</strong>: Atirar em um alvo grande e imóvel a curta distância.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80e5-ba7f-c20b524f6131" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Fácil</strong>: Fazer um truque simples, como lançar uma adaga com precisão moderada.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80d2-85d5-d2a9e2fd2016" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Fácil</strong>: Realizar uma pirueta básica ou acertar um alvo pequeno parado.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-803b-9ad3-c07289ffba32" class="bulleted-list"><li style="list-style-type:disc"><strong>Fácil</strong>: Executar uma manobra complicada, como desarmar um inimigo com destreza.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8050-af4a-f6c09611b02e" class="bulleted-list"><li style="list-style-type:disc"><strong>Médio</strong>: Realizar um golpe acrobático em combate sem comprometer sua postura.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-800d-97f9-c5b61bc9d385" class="bulleted-list"><li style="list-style-type:disc"><strong>Difícil</strong>: Derrubar múltiplos inimigos com movimentos rápidos e precisos.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-804c-9033-c38ff1d7d2f6" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Difícil</strong>: Atingir um alvo em movimento a longa distância com um projétil.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80e4-8f02-d1815fa37183" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Difícil</strong>: Desviar de múltiplos ataques em combate corpo a corpo sem sofrer danos.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80f1-b0bb-e29586ee4e71" class="bulleted-list"><li style="list-style-type:disc"><strong>Quase Impossível</strong>: Realizar movimentos acrobáticos impossíveis para humanos normais, como correr por paredes em combate.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8067-b87b-cff12ef063fd" class="bulleted-list"><li style="list-style-type:disc"><strong>Impossível</strong>: Realizar movimentos perfeitos que violam leis da física, como lutar em gravidade zero sem perder o equilíbrio.</li></ul></div><div style="display:contents" dir="auto"><hr id="188e66c8-f973-8013-ac88-f4734af42cb4"/></div><div style="display:contents" dir="auto"><p id="188e66c8-f973-8058-9a33-efc0d6bf447a" class=""><strong>Conhecimento</strong></p></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80fb-9bc2-c23346ca67b7" class="bulleted-list"><li style="list-style-type:disc"><strong>Sucesso Automático</strong>: Reconhecer símbolos ou conceitos comuns que fazem parte do cotidiano.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-809a-b44e-d78dbdf33da9" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Fácil</strong>: Identificar o significado de um símbolo conhecido ou lembrar um fato básico.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8087-ad7a-cfd976fc3a22" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Fácil</strong>: Traduzir partes simples de uma linguagem familiar.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80a2-9e63-cbfdc624da58" class="bulleted-list"><li style="list-style-type:disc"><strong>Fácil</strong>: Aplicar um conhecimento técnico a uma tarefa prática.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8019-8a00-c4df65a785d2" class="bulleted-list"><li style="list-style-type:disc"><strong>Médio</strong>: Lembrar-se de informações complexas aprendidas há muito tempo.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8041-bef7-d8df8449c0db" class="bulleted-list"><li style="list-style-type:disc"><strong>Difícil</strong>: Decifrar textos antigos com algumas lacunas ou entender o funcionamento de uma tecnologia avançada.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-803c-b324-c2eeaa57aef6" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Difícil</strong>: Desenvolver uma teoria original baseada em fragmentos de informação.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8038-b1ca-de0cbb1f30db" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Difícil</strong>: Resolver problemas avançados envolvendo múltiplas áreas de conhecimento em tempo limitado.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8090-89f3-ecc161eda12d" class="bulleted-list"><li style="list-style-type:disc"><strong>Quase Impossível</strong>: Traduzir uma língua completamente extinta ou entender a lógica de uma magia estrangeira em instantes.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-801d-832b-c1896565ae37" class="bulleted-list"><li style="list-style-type:disc"><strong>Impossível</strong>: Criar um grimório completo de magia avançada ou reinventar uma ciência perdida.</li></ul></div><div style="display:contents" dir="auto"><hr id="188e66c8-f973-8034-8535-c5c479211792"/></div><div style="display:contents" dir="auto"><p id="188e66c8-f973-80a3-973d-eaf35292624c" class=""><strong>Foco</strong></p></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80c4-9028-d697b2895916" class="bulleted-list"><li style="list-style-type:disc"><strong>Sucesso Automático</strong>: Concentração suficiente para realizar uma tarefa simples, como meditar por alguns minutos.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80f3-9742-d41a7bd821f8" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Fácil</strong>: Ignorar pequenas distrações enquanto se mantém atento a uma tarefa.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8057-9199-c8349ea644c4" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Fácil</strong>: Permanecer calmo em uma situação levemente desconfortável.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-801e-baa6-c888d4f290be" class="bulleted-list"><li style="list-style-type:disc"><strong>Fácil</strong>: Focar intensamente em um objetivo por um curto período, mesmo sob pressão.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8066-9d46-ca4c5277140a" class="bulleted-list"><li style="list-style-type:disc"><strong>Médio</strong>: Superar emoções negativas momentâneas e agir racionalmente em situações difíceis.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8006-b89a-cb739d6c889a" class="bulleted-list"><li style="list-style-type:disc"><strong>Difícil</strong>: Manter o controle emocional durante uma situação de extremo estresse.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-801d-9bf2-e92bcb45d693" class="bulleted-list"><li style="list-style-type:disc"><strong>Muito Difícil</strong>: Entrar em um estado de foco profundo em meio ao caos absoluto.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-808a-a37d-fe4b27bfdeef" class="bulleted-list"><li style="list-style-type:disc"><strong>Extremamente Difícil</strong>: Canalizar sua energia interna para manipular forças mágicas ou executar ações de extrema precisão.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-8047-895b-eb4d84e2eda3" class="bulleted-list"><li style="list-style-type:disc"><strong>Quase Impossível</strong>: Meditar profundamente a ponto de ignorar completamente o ambiente ao redor, mesmo sob ataque.</li></ul></div><div style="display:contents" dir="auto"><ul id="188e66c8-f973-80e1-ae2e-e8c8fa2072a8" class="bulleted-list"><li style="list-style-type:disc"><strong>Impossível</strong>: Manter um estado de concentração absoluta enquanto manipula energias mágicas poderosas e desestabilizadoras sem nenhuma interrupção.</li></ul></div><div style="display:contents" dir="auto"><p id="188e66c8-f973-8058-99fe-d61f2bded4a3" class="">Dado os exemplos vale dizer que normalmente, ações com dificuldade extremamente baixa que indicam um sucesso garantido, normalmente não precisam de teste, mas claro que isso varia dependendo da situação e vontade do mestre.</p></div><div style="display:contents" dir="auto"><p id="188e66c8-f973-80f6-be65-fa1267e7c1f6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="188e66c8-f973-80ef-b192-df3e9765bd57" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

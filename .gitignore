@@ -1,0 +1,19 @@
+# Segredos e ambiente local
+.env
+.env.*
+!.env.example
+
+# SO / IDE
+Thumbs.db
+.DS_Store
+.cursor/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+venv/
+.venv/
+
+# Logs temporários
+*.log

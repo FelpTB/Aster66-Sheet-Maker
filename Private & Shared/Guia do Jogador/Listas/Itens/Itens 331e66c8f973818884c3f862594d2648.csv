@@ -1,0 +1,59 @@
+﻿Name,Alcançe,Empunhadura,Habilidade,Preço Unitário,Qtd. por espaço,Tempo de Uso,Tipo
+Semente Mágica,,,,1000-1500 Asterics,5,,"Componente, Consumível"
+Machado de Batalha,Corpo a Corpo,mão e meia,"Causa 1d6 + 3 Cortante ",190-220 Asterics,1,Ação,Arma
+Punhado de açúcar,,,,2-5 Asterics,5,,"Componente, Consumível"
+Espada Longa,Corpo a Corpo,mão e meia,Causa 1d6 +2 de dano cortante.,150-200 Asterics,1,Ação,Arma
+Flechas,,,,10-15 Asterics,3,,Componente
+Lança,"Longo, Médio",duas mãos,Causa 1d6 + 1 de dano perfurante.,130-180 Asterics,1,Ação,"Arma, Arma de Caça"
+Arco Longo,Longo,duas mãos,Causa 1d6 Perfurante,160-220 asterics,1,Ação,"Arma, Arma de Caça"
+Maça,Corpo a Corpo,mão e meia,Causa 1d6 Contundente + 2 Perfurante,170-220 Asterics,1,Ação,Arma
+Carapaça Animal,,,,5-10 Asterics,3,,Componente
+Poção Cerimônial,,,Concede tontura por 6 hrs,100-130 Asterics,1,Reação,"Componente, Consumível"
+Talismã,,,Alma +1 para o dono,0,1,,Artefato
+Cogumelo Alucinógeno,,,,25-30 Asterics,5,,"Componente, Consumível"
+Frasco de Álcool,,,,5-10 Asterics,2,,"Componente, Consumível"
+Troféu de caça,,,,???,1,,Componente
+Harpa Grande,,duas mãos,,5000 Asterics,0,Ação,"Imóvel, Insturmento Musical"
+Tambor,,duas mãos,,80-100 Asterics,1,,Insturmento Musical
+Erva Alucinógena,,,,5-95 Asterics,5,,"Componente, Consumível"
+Harpa,,duas mãos,,220 Asterics,1,,Insturmento Musical
+Alaúde,,duas mãos,Musicas tocadas consomem -1 de energia.,120-160 Asterics,1,,Insturmento Musical
+Flauta,,duas mãos,,30-50 Asterics,,,Insturmento Musical
+Gaita de Fole,,duas mãos,,300 Asterics,1,,Insturmento Musical
+Piano,,duas mãos,Músicas Tocadas no Piano Aplicam o dobro do efeito.,10000 Asterics,0,Ação,"Imóvel, Insturmento Musical"
+Fogo de Alquimista,,,,10-50,2,Reação,"Componente, Consumível"
+Carnes,,,,10-100 asterics,3,,Componente
+Peças de metal,,,,15-25,5,,Componente
+"Pólvora ",,,,20-40,5,,Componente
+Ovos,,,,1-5 astrics,6,,Componente
+Ervas,,,,5-20,5,,Componente
+Tridente,Médio,mão e meia,Causa 1d6 + 3 de dano de perfuração.,200-250 Asterics,1,Ação,Arma
+Escudo Grande,,uma mão,Aumenta o bloqueio em +3,150-200 Asterics,1,,Proteção
+Anestesia,,,,100-150 Asterics,1,Ação,Consumível
+Esteróides,,,,200-300 Asterics,1,Ação,Consumível
+Antidoto,,,,50-70 Asterics,1,Ação,Consumível
+Kit médico (1 Carga),,,,30-40 Asterics,,,Recarregar Kit
+Rede Enroscante,Corpo a Corpo,uma mão,,100-120 Asterics,1,Ação,Ferramenta
+Vegetais,,,,5-25 asterics,5,,Componente
+Manoplas de Combate,Corpo a Corpo,duas mãos,Causa 1d6 de dano de impacto ao golpear com os punhos.,230-270 Asterics,1,Ação,Arma
+"Munição Explosiva ",,,Disparos causam +1d6 de dano mas perdem 1 nível de alcance.,90-100 Asterics,3,,Consumível
+Sica curva,Corpo a Corpo,uma mão,Causa 1d6 + 1 de dano cortante.,200-230 Asterics,1,Ação,Arma
+Frutas,,,,5-20 asterics,5,,Componente
+Gladius,Corpo a Corpo,uma mão,Causa 1d6 + 1 de dano cortante.,150-180 Asterics,1,Ação,Arma
+Munição Incandescente,,,Disparos causam +2 dano de fogo.,70-80 Asterics,3,,Consumível
+Zarabatana,Longo,uma mão,Atira dardos no alvo,80-100,1,Ação,"Arma, Arma de Caça"
+Facão,Corpo a Corpo,uma mão,"causa 1d6 cortante, concede +2 em testes relacionados a sobrevivência.",160-180,1,Ação,"Arma, Arma de Caça"
+Relíquia Antiga,,,,???,1,,Artefato
+"Kit de Forja (1 Carga) ",,,,40-50 Asterics,,,Recarregar Kit
+Dardo Venenoso,,,Causa 1d6 de dano perfurante e aplica envenenamento.,30-50,5,,Componente
+Amuleto da Caçada,,,,???,1,,Artefato
+Boomerang,Longo,uma mão,Causa 1d6 de dano de corte,120-150,1,Ação,"Arma, Arma de Caça"
+Dardo Normal,,,Causa 1d6 de dano perfurante,10-20,5,,Componente
+Rifle,Longo,duas mãos,Causa 2d6 de dano perfurante.,350-500,1,Ação,"Arma, Arma de Caça"
+Sangue de Soldado,,,"Berserker: Aumente 2 de fúria.(Se sua fúria for 0 ela passa para 2)
+Não Berserker: Faça um teste de corpo, em uma falha você vomita perdendo 1 de corpo até o fim da cena, em um sucesso a bebida te motiva aumentando seu atributo Corpo em +1 até o fim da cena e te curando em 1d6.",20-40,1,Ação,Consumível
+Munição para Arma de fogo,,,Recarrega 1 munição de uma arma de fogo.,5-10,10,,Componente
+Poção de Mana,Corpo a Corpo,,Recupera 1d6 de energia,50-75,2,Reação,Consumível
+Poção de Cura,Corpo a Corpo,,Cura 1d6 de vida.,25-50,2,Reação,Consumível
+Arsenal de Transmutação,,,Os acúmulos desse Arsenal podem ser usados para substituir qualquer componente.,100-200,0.5,,Ferramenta
+Mapa da Área,,,"Em posse do mapa, é impossível se perder na área mapeada.",???,1,,Artefato

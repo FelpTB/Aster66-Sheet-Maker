@@ -1,0 +1,729 @@
+﻿Name,Alcançe,Condição de aprendizado,Custo,Date,Modo de Uso,Origem,Tempo de Uso,Tipo
+Apressar Ritual,Universal,,1 alma por Hora reduzida,,Livre,Xamã,Imediato,Habilidade
+Alma Ritualística,Universal,,,,Passivo,"Livre, Xamã",,Habilidade Característica
+Ritual de Proteção,"Corpo a Corpo, Universal",,"- 1 Carapaça animal
+- 2 de energia",,Ação,Xamã,2 Horas,Ritual
+Ritual de Fervor,"Corpo a Corpo, Universal",,"- 2 de energia
+- Uma chama",,Ação,Xamã,2 Horas,Ritual
+Ritual de Agilidade,"Corpo a Corpo, Universal",,"- 2 de energia
+- 1 pena",,Ação,Xamã,4 horas,Ritual
+Manequim de Palha,"Corpo a Corpo, Universal",,"- 3 de energia
+- Um boneco de palha
+- Material genético do alvo (Gota de sangue, fio de cabelo, unha…)",,Ação,Xamã,Imediato,Ritual
+Semente da Amizade,,,- 1 semente mágica,,Descanso,"Druidismo, Xamã",2 Horas,Ritual
+"Florescer ",Corpo a Corpo,,"- 2 energia
+- 1 punhado de açúcar",,Ação,"Druidismo, Xamã",Imediato,Ritual
+Semente Mágica,,,"- Um pequeno recipiente com algodão.
+- 2 de energia por semente.
+- Qualquer número de sementes a serem encantadas.",,Descanso,"Druidismo, Xamã",6 meses,"Receita, Ritual"
+Talismã,,,"- 1 pequeno objeto de madeira ou qualquer material orgânico.
+- 4 de energia
+- 1 Gota de sangue do futuro dono",,Descanso,"Druidismo, Xamã",2 Horas,"Receita, Ritual"
+Poção Cerimônial,,,"- 1 Cogumelo ou erva alucinógena.
+- 1 Frasco de álcool
+- 2 de energia",,Descanso,"Druidismo, Xamã",8 horas,"Receita, Ritual"
+Rito de Passagem,,,- Poção Cerimonial,,Descanso,"Druidismo, Xamã",6 Horas,Ritual
+Ritual de ligação,"Corpo a Corpo, Universal",,"- 1 Qualquer tipo de amarra. (Corda, corrente, vinha)
+- 4 de energia",,Ação,Xamã,Imediato,Ritual
+Evocar Natureza,Longo,,4 Energia,,Ação,"Druidismo, Xamã",Imediato,Magia
+Treino Corporal,,,,,"Evolução, Passivo","Livre, Treinamentos",Imediato,Treinamento
+Treino de Agilidade,,,,,"Evolução, Passivo","Livre, Treinamentos",Imediato,Treinamento
+Treino de Resistência,,,,,"Evolução, Passivo","Livre, Treinamentos",Imediato,Treinamento
+Estudo,,,,,"Evolução, Passivo","Livre, Treinamentos",Imediato,Treinamento
+Meditação,,,,,"Evolução, Passivo","Livre, Treinamentos",Imediato,Treinamento
+Treino Exotérico,,,,,"Evolução, Passivo","Livre, Treinamentos",Imediato,Treinamento
+Treino Mental,,,,,"Evolução, Passivo","Livre, Treinamentos",Imediato,Treinamento
+Treino de Durabilidade,,,,,"Evolução, Passivo","Livre, Treinamentos",Imediato,Treinamento
+Ritual de Purificação,,,- 1 Poção cerimonial,,Descanso,Xamã,4 horas,Ritual
+Ritual de Limpeza,Médio,,"- 1 recipiente de água limpa
+- 3 de energia",,Ação,Xamã,Imediato,Ritual
+Ritual Forçado,,,- 1 de alma por item substituído,,Livre,Xamã,Imediato,Habilidade
+Reza,,,- 1 de energia,,Reação,Xamã,Imediato,Ritual
+Rito da Fumaça,,,"- 1 fogueira acesa
+-  1 punhado de ervas
+-  3 de energia",,Descanso,Xamã,4 horas,Ritual
+"Maldição do Manequim ",,,,,Passivo,Xamã,Imediato,Habilidade
+Mestre de Rituais,,,,,Passivo,Xamã,Imediato,Habilidade
+Evocar Espírito Animal,,,"- 6 de energia
+- 1 Troféu de caça",,Ação,"Druidismo, Xamã",Imediato,Ritual
+Transformação animal,,,- Energia igual ao nível da criatura transformada,,Ação,"Druidismo, Xamã",Imediato,Ritual
+Mestre Druída,,,,,Passivo,"Druidismo, Xamã",Imediato,Habilidade
+Transformação controlada,,,- Energia igual ao nível da criatura tranformada,,Reação,"Druidismo, Xamã",Imediato,Ritual
+Corpo quimera,,,,,Passivo,Druidismo,Imediato,Habilidade
+Personificação da natureza,,Domine todas as técnicas de druidismo.,,,Passivo,Druidismo,Imediato,Habilidade
+Pele de árvore,Corpo a Corpo,,4 de energia,,Ação,Druidismo,Imediato,Magia
+Enraizar,Corpo a Corpo,,2 de energia,,Ação,Druidismo,Imediato,Magia
+Pacto Forçado,,,,,Passivo,Cultista,,Habilidade
+Vontade das sombras,,Ligação += 10,,,Passivo,Pacto das Sombras,Imediato,Habilidade
+Sonhos Proféticos,,Ligação = 1,,,Descanso,"Magia da Mente, Pacto das Memórias",6 Horas,Habilidade
+Conexão Mental,Longo,Ligação = 4,2 de energia,,Reação,"Magia da Mente, Pacto das Memórias",Imediato,Magia
+Sobrecarregar Mente,Longo,Ligação = 8,5+,,Ação,"Magia da Mente, Pacto das Memórias",Imediato,Magia
+Florescer de Paz,Longo,Ligação = 14,5 de mana por turno ativo.,,Ação,"Druidismo, Pacto da Grande Mãe",Imediato,Magia
+Lutar pela paz,,Ligação = 6,,,Passivo,Pacto da Grande Mãe,,Habilidade
+Paz Purificadora,,Ligação = 16,,,Passivo,"Druidismo, Pacto da Grande Mãe",Imediato,Habilidade
+Toque do Berimbau,,,- 2 de energia por tuno ativo,,Ação,Lutador,1 Turno,Música
+Contra Golpe,,,,,Reação,Lutador,Imediato,Habilidade
+Sequência,,,,,Passivo,Lutador,Imediato,Habilidade
+Artes mistas,,,,,Passivo,Lutador,Imediato,Habilidade
+Jab,Corpo a Corpo,,,,Livre,Lutador,Imediato,Golpe
+Direto,Corpo a Corpo,,- 2 de energia,,Ação,Lutador,Imediato,Golpe
+Cruzado,Corpo a Corpo,,- 4 de energia,,Ação,Lutador,Imediato,Golpe
+Trocar Base,,,,,Passivo,Lutador,Imediato,Habilidade
+Recuperar Fôlego,,,,,Ação,Lutador,Imediato,Habilidade
+Trilha sonora,,,,,Passivo,"Bardo, Livre",,Habilidade Característica
+Canção de reavivamento,,,7 de mana por turno ativo,,Ação,Bardo,1 Turno,Música
+"Musica Dançante ",,,4 de mana por turno ativo,,Ação,Bardo,1 Turno,Música
+Rock Pesado,,,4 de mana por turno ativo,,Ação,Bardo,1 Turno,Música
+Perturbação Sonora,,,3 de mana,,Ação,Bardo,1 Turno,Habilidade
+Golpes leves,,,,,Passivo,Livre,Imediato,Habilidade
+Estilo imprevisível,,,,,Passivo,"Lutador, Samurai",Imediato,Habilidade
+Iaidô,,,,,"Passivo, Reação",Samurai,Imediato,Habilidade
+Acertos Precisos,,,,,Passivo,Livre,Imediato,Habilidade
+Golpes Pesados,,,,,Passivo,Livre,Imediato,Habilidade
+Estilo Especial: Raio de Prata,,Treine como discípulo de Kyojuro Kapuri,,,Passivo,Samurai,Imediato,Técnica inigualável
+Estilo Especial: Javali,,Treine como discípulo do mestre Javali,,,Passivo,Samurai,Imediato,Técnica inigualável
+Fragmentar Atacante,,,,,Passivo,"Lutador, Samurai",Imediato,Habilidade
+Tornado,Médio,,6 de mana + 3 por turno ativo,,Ação,Magia de Vento,Imediato,Magia
+Tornado Elemental,,,,,Evolução,Magia de Vento,Imediato,Magia
+Magia do Aprendizado,,,,,Aprender,"Livre, Mago",,Habilidade Característica
+Transcrição de Magia,,,,,Descanso,Mago,2 Horas,Habilidade
+Magigenharia Reversa,,,,,Descanso,Mago,2 Horas,Habilidade
+Concentrar Mana,,,,,Ação,"Feiticeiro, Mago, Monge",Imediato,Habilidade
+Melhorar Magia,,,,,Aprender,Mago,Imediato,Habilidade
+Autor de Magias,,,,,Aprender,Mago,Imediato,Habilidade
+Estudar grimório,,,,,Descanso,Mago,4 horas,Habilidade
+Otimizar grimório,,,,,Evolução,Mago,Imediato,Treinamento
+Magia rápida,,,2 mana,,Reação,Mago,Imediato,Habilidade
+Imbuir Magia,,,,,Livre,Mago,Imediato,Habilidade
+Manipulação do Sangue,Si Mesmo,,,,Passivo,"Hemomancia, Livre",,Habilidade Característica
+Transfusão de mana,Si Mesmo,,3 de vida,,Reação,Hemomancia,Imediato,Habilidade
+Forja sanguínea,Corpo a Corpo,,"6 de vida, 2 de energia",,Ação,Hemomancia,Imediato,Magia
+Faro de sangue,Universal,,,,Passivo,"Hemomancia, Vampiro",Imediato,Habilidade
+Vampirismo,Corpo a Corpo,Habilidade inicial da Raça Vampiro,,,Reação,"Hemomancia, Vampiro",Imediato,Habilidade Inata
+Musicista Versátil,,,,,Passivo,Bardo,,Habilidade
+Melodia Restauradora,,,4 de mana por turno ativo,,Ação,Bardo,1 Turno,Música
+Melodia Ácida,,,3 de mana por tuno ativo,,Ação,Bardo,1 Turno,Música
+Melodia Purificadora,,,3 de mana por turno ativo,,Ação,Bardo,1 Turno,Música
+Melodia de Resistência,,,3 de mana por turno ativo,,Ação,Bardo,1 Turno,Música
+Melodia Melancólica,,,2 de mana por tuno ativo.,,Ação,Bardo,1 Turno,Música
+Ritmo Viciante,,,4 de mana por turno ativo.,,Ação,Bardo,1 Turno,Música
+Passo de Dança,,,,,Livre,Bardo,Imediato,Habilidade
+Arranjo Musical,,,,,Passivo,Bardo,,Habilidade
+Tocar com a Alma,,,,,Passivo,Bardo,,Habilidade
+Notas Precisas,,,,,Passivo,Bardo,,Habilidade
+Espirito de Banda,,,,,Passivo,Bardo,,Habilidade
+Transição de Ritmo,,,,,Reação,Bardo,Imediato,Habilidade
+Música persistente,,,,,Passivo,Bardo,,Habilidade
+Pé de Valsa,,,,,Passivo,Bardo,,Habilidade
+Alma Musical,,,,,Passivo,Bardo,,Habilidade
+Provocação Sonora,,,3 de mana,,Ação,Bardo,Imediato,Magia
+Illusão Dissonante,,,4 de mana,,Ação,Bardo,Imediato,Magia
+Acorde Final,,,10 de mana.,,Ação,Bardo,Imediato,Habilidade
+Vocação pra Vocallista,,,,,Passivo,Bardo,,Habilidade
+"Mão leve ",,,2 de mana,,Reação,Malandro,Imediato,Habilidade
+Gambiarra,,,"Objetos aleatórios, 4 de mana",,Ação,Malandro,Imediato,Receita
+Loot Aprimorado,,,,,Passivo,Malandro,,Habilidade
+Chutar areia,,,2 de mana,,Ação,Malandro,Imediato,Golpe
+"Pancada Na Cabeça ",,,3 de mana,,Ação,Malandro,Imediato,Golpe
+Matador de aluguel,,,,,Passivo,Malandro,,Habilidade
+Bomba de fumaça,,,"Fogo de alquimista, Ervas, Açúcar",,Descanso,Malandro,4 horas,Receita
+Ferramentas de Arrombamento,,,Peças de metal,,Descanso,Malandro,2 Horas,Receita
+Explosivo improvisado,,,"Peças de metal, Pólvora.",,Descanso,Malandro,2 Horas,Receita
+Fingir de Morto,,,,,Morrendo,Malandro,Imediato,Habilidade
+Ataque furtivo,,,,,Passivo,Malandro,,Habilidade
+Executar,,,4 de mana,,Ação,Malandro,Imediato,Golpe
+Faro pra Armadilha,,,3 de mana,,Descanso,"Caçador, Malandro",Minutos,Habilidade
+Armadilha Cortante,,,1 lâmina,,Descanso,"Caçador, Malandro",Minutos,Receita
+Armadilha Explosiva,,,1 Explosivo Improvisado.,,Descanso,Malandro,1 Turno,Habilidade
+Instinto assassino,Si Mesmo,,,,Passivo,"Berserker, Caçador, Malandro, Samurai",,Habilidade
+Acerto Revigorante,,,,,Passivo,"Berserker, Lutador, Malandro, Samurai",Imediato,Habilidade
+Acerto Motivador,,,,,Passivo,"Berserker, Lutador, Malandro, Samurai",Imediato,Habilidade
+Passo Astuto,,,2 de mana,,Ação,Malandro,Imediato,Habilidade
+Se esconder,,,4 de mana,,Ação,Malandro,Imediato,Habilidade
+Contos de Fogueira,,,,,Descanso,Malandro,2 Horas,Habilidade
+Laço Familiar,,,,,Evolução,Mago,,Compania
+Mago Mestre de Familiares,,,,,Passivo,Mago,,Habilidade
+Imortalidade por Sangue,Si Mesmo,Habilidade inicial da Raça Vampiro,Uma quantidade razoável de Sangue,,"Descanso, Passivo","Hemomancia, Vampiro",8 horas,Habilidade Inata
+Descedente de Aster,,Habilidade inicial da raça Asteriano,,,"Aprender, Passivo",Asteriano,,Habilidade Inata
+Ritual Antropofágico,,Habilidade inicial da raça Goblin,Uma parte de um inimigo derrotado,,Descanso,Goblin,8 horas,"Habilidade Inata, Ritual"
+Descensão,,Habilidade inicial da raça Infernal,,,"Evolução, Passivo",Infernal,,Habilidade Inata
+Guiado pelo ódio,,Habilidade inicial da raça Orc,,,Passivo,Orc,,Habilidade Inata
+Versatilidade Humana,,Habilidade inicial da raça Humano,,,Passivo,Humano,,Habilidade Inata
+Aprendizado Adaptado,,,,,Passivo,Humano,,Habilidade Inata
+Afinidade com as Trevas,,Habilidade inicial da raça ”Drow”,,,Passivo,"Drow, Magia Proibida",,Habilidade Inata
+Conhecimento de Eras,,Habilidade inicial da raça Elfo,,,Passivo,Élfico,,Habilidade Inata
+Doppleganger,,Habilidade inicial da raça Doppleganger,5 de mana,,Ação,Doppleganger,Imediato,Habilidade Inata
+Cópia perfeita,,,,,Passivo,Doppleganger,,Habilidade Inata
+Imitação da Alma,,,,,Passivo,Doppleganger,,Habilidade Inata
+Herança Dracônica,Si Mesmo,Habilidade Inicial da classe Draconato,,,Passivo,Dracônico,,Habilidade Inata
+Escamas de Dragão,Si Mesmo,Ganho a partir de “Herança Dracônica”,,,"Evolução, Passivo",Dracônico,,Habilidade Inata
+Asas de Dragão,Si Mesmo,Ganho a partir de “Herança Dracônica”,,,"Ação, Evolução",Dracônico,Imediato,Habilidade Inata
+Sopro de Dragão,Médio,Ganho a partir de “Herança Dracônica”,3 de energia,,"Ação, Evolução",Dracônico,Imediato,Habilidade Inata
+Esmagar Contra o Chão,Corpo a Corpo,,4 de energia,,Ação,Lutador,Imediato,Golpe
+Elbow Drop,Corpo a Corpo,,4 de energia,,Ação,Lutador,Imediato,Golpe
+Meteoro do Dragão,Si Mesmo,,,,Passivo,Dracônico,,Habilidade Inata
+Escamas Sólidas,Si Mesmo,,,,Passivo,Dracônico,,Habilidade Inata
+Escamas Eternas,Si Mesmo,,,,Passivo,Dracônico,,Habilidade Inata
+Sopro Potente,Si Mesmo,,,,Passivo,Dracônico,,Habilidade Inata
+Baforada Do Dragão,Si Mesmo,,,,Passivo,Dracônico,,Habilidade Inata
+"Ascenção Dracônica ",Si Mesmo,,4 de energia por turno ativo,,Ação,Dracônico,Imediato,Habilidade Inata
+Estado de Foco,,,,,Ação,"Livre, Monge",,Habilidade Característica
+Nirvana,,,,,Passivo,Monge,,Habilidade
+Mente Vazia,,,,,Passivo,Monge,,Habilidade
+Armadura de Chi,,,,,Passivo,Monge,,Habilidade
+Meditação,,,,,Descanso,Monge,4 horas,Habilidade
+Impacto na Alma,,,,,Passivo,Monge,,Habilidade
+Fúria Astral,,,,,Morrendo,Monge,,Habilidade
+Corpo Equilibrado,,,,,Passivo,Monge,,Habilidade
+Compartilhar Chi,Corpo a Corpo,,3 de energia,,Ação,Monge,Imediato,Habilidade
+Rajada de Chi,Médio,,4 de energia,,Ação,Monge,1 Turno,Golpe
+Rajada Potente,,,,,Passivo,Monge,,Habilidade
+Rajada destrutiva,,,,,Passivo,Monge,,Habilidade
+Rajada Pasciente,,,1 de energia por turno,,"Ação, Passivo",Monge,,Habilidade
+"Foco Persistente ",,,,,Passivo,Monge,,Habilidade
+Foco Infinito,,,,,Passivo,Monge,,Habilidade
+Aura Purificadora,Médio,,4 de energia,,Ação,Monge,Imediato,Magia
+Lâmina de Chi,,,3 de energia,,Ação,Monge,Imediato,Golpe
+Chi Regenerativo,,,,,Passivo,Monge,,Habilidade
+Foco Imparável,,,,,Passivo,Monge,,Habilidade
+Práticas Zen,,,,,Descanso,Monge,2 Horas,Habilidade
+Impulso de Chi,,,3 de energia,,Reação,Monge,Imediato,Habilidade
+Aprendizado das Ruas,,,,,"Evolução, Passivo","Livre, Malandro",,Habilidade Característica
+Crítico Aprimorado,,,,,Passivo,Malandro,,Habilidade
+Prêmios Da Caçada,,,,,Passivo,"Caçador, Livre",,Habilidade Característica
+Clone das Sombras,Corpo a Corpo,Ligação += 5,5 de energia,,Ação,"Magia Proibida, Magia das Sombras, Pacto das Sombras",Imediato,Magia
+Forma das Sombras,,Ligação += 7,,,Passivo,"Magia Proibida, Magia das Sombras, Pacto das Sombras",,Habilidade
+Coletar Alma,,,"Recipiente de Almas, Cadáver recém morto.",,Descanso,Necromancia,1 Hora,Ritual
+"Recipiente de Almas ",,,"1 recipiente de cerâmica ou vidro, 1 punhado de pó de cristal negro.",,Descanso,Necromancia,4 horas,Receita
+Consumir Almas,Médio,,,,Ação,Necromancia,,Magia
+"Encarnar ",Corpo a Corpo,,5 de energia,,Ação,Necromancia,,Magia
+"Desencarnar ",Corpo a Corpo,,5 de energia,,Ação,Necromancia,,Magia
+"Memórias da Alma ",,,,,Passivo,Necromancia,,Habilidade
+"Levantar Cadáver ",Médio,,4 de energia por cadáver,,Ação,Necromancia,,Magia
+"Evocar Espírito ",,,"1 Alma, 4 de energia",,Ação,Necromancia,,Ritual
+Reservatório de almas,,,,,Passivo,Necromancia,,Habilidade
+Descanso Exotérico,,,,,Descanso,Xamã,2 Horas,Habilidade
+Gloria das Arenas,,,,,Passivo,"Gladiador, Livre",,Habilidade Característica
+Execução Extravagante,Corpo a Corpo,,4 de energia,,Ação,Gladiador,Imediato,Habilidade
+Até a Morte,,,,,Morrendo,Gladiador,Imediato,Habilidade
+Intimidar,Médio,,2 de energia,,Reação,Gladiador,Imediato,Habilidade
+Não Posso Perder,,,,,Passivo,Gladiador,Imediato,Habilidade
+Lamber as feridas,,,,,Descanso,Gladiador,2 Horas,Habilidade
+Dor Ignorada,,,,,Livre,Gladiador,Imediato,Habilidade
+Orgulho das Marcas,,,,,Passivo,Gladiador,,Habilidade
+Manter Prestígio,,,,,Passivo,Gladiador,,Habilidade
+Plot Armor,,,,,Passivo,Gladiador,,Habilidade
+Estilo Bestiarius,,,,,"Evolução, Passivo",Gladiador,,Habilidade
+Precisão Pesada,,,,,Passivo,Berserker,,Habilidade
+Atropelar,,,5 de energia,,"Ação, Movimento","Berserker, Gladiador, Lutador",Imediato,Habilidade
+Avanço Descontrolado,,,,,Passivo,"Berserker, Gladiador, Lutador",,Habilidade
+Salto Potente,,,,,Reação,"Berserker, Gladiador, Lutador",Imediato,Habilidade
+Golpe na Aterrizada,Corpo a Corpo,,2 de energia,,Reação,"Berserker, Gladiador, Lutador",Imediato,Golpe
+Escudo Humano,,,,,Reação,Lutador,Imediato,Habilidade
+Pisar,Corpo a Corpo,,- 1 de energia,,Ação,Lutador,Imediato,Golpe
+"Golpes Destruidores ",,,,,Passivo,Lutador,,Habilidade
+Ataque Esmagador,,,,,Passivo,Lutador,,Habilidade
+Agarrão Imediato,,,,,Passivo,Lutador,,Habilidade
+Arremessar,Médio,,- 2 de energia,,Ação,Lutador,Imediato,Golpe
+Joelhada,Corpo a Corpo,,- 3 de energia,,Ação,Lutador,Imediato,Golpe
+Voadora,Corpo a Corpo,,- 2 de energia,,Ação,Lutador,Imediato,Golpe
+"Chute Giratório ",Corpo a Corpo,,- 3 de energia,,Ação,Lutador,Imediato,Golpe
+Footwork,,,,,Livre,Lutador,Imediato,Habilidade
+Estilo Murmillio,,,,,"Evolução, Passivo",Gladiador,,Habilidade
+Estilo Tharex,,,,,"Evolução, Passivo",Gladiador,,Habilidade
+Estilo Retiarus,,,,,"Evolução, Passivo",Gladiador,,Habilidade
+Estilo Secutor,,,,,"Evolução, Passivo",Gladiador,,Habilidade
+Estilo Hoplomachus,,,,,"Evolução, Passivo",Gladiador,,Habilidade
+Estilo Provocator,,,,,"Evolução, Passivo",Gladiador,,Habilidade
+Estilo Dimachaerus,,,,,"Evolução, Passivo",Gladiador,,Habilidade
+Empurar e Puxar,,,"- 2 de energia ",,Reação,Gladiador,,Habilidade
+Gladiador Versátil,,,,,Passivo,Gladiador,,Habilidade
+Pancada Corporal,Corpo a Corpo,,3 de energia.,,Ação,"Cavaleiro, Gladiador",Imediato,Golpe
+Acerto Extravagante,,,,,Passivo,Gladiador,,Habilidade
+Chute Frontal,Corpo a Corpo,,2 de energia,,Ação,Gladiador,Imediato,Golpe
+Desarmar,Corpo a Corpo,,,,Ação,Gladiador,Imediato,Golpe
+Diplomacia,,,,,Passivo,"Aventureiro, Diplomata, Livre",,Habilidade Característica
+Enrolar,,,,,Ação,"Aventureiro, Diplomata",1 Turno,Habilidade
+Discurso de Motivação,,,,,Descanso,"Aventureiro, Diplomata",2 Horas,Habilidade
+Tokkariano,,,,,,Diplomata,,Língua
+Poliglota,,,,,"Evolução, Passivo",Diplomata,,Habilidade
+Élfico,,,,,,"Diplomata, Élfico",,Língua
+Saa-bachiano,,,,,,Diplomata,,Língua
+Kalasariano,,,,,,Diplomata,,Língua
+Ying,,,,,,Diplomata,,Língua
+Último Pedido,,,,,Morrendo,Diplomata,Imediato,Habilidade
+"Banquete ",,,,,Descanso,"Aventureiro, Cozinheiro, Livre",2 Horas,Habilidade Característica
+Livro de Receitas,,,,,Aprender,Cozinheiro,Imediato,Habilidade
+Conquistar Pelo Estômago,,,,,Passivo,Cozinheiro,,Habilidade
+Petisco Picante,,,- 1 Pimenta,,Evolução,Cozinheiro,,Receita
+Salada de Ervas,,,- 3 Ervas,,Evolução,Cozinheiro,,Receita
+Sobremesa Açucarada,,,"- 1 Punhado de açúcar
+- 1 Componente a sua escolha",,Evolução,Cozinheiro,,Receita
+Entrada Generosa,,,- 1 Componente a sua escolha,,Evolução,Cozinheiro,,Receita
+"Petisco Saudável ",,,- 1 fruta ou 1 vegetal,,Reação,Cozinheiro,Imediato,Receita
+Petisco Picante,,,- 1 Pimenta,,Reação,Cozinheiro,Imediato,Receita
+Petisco Generoso,,,- 1 Componente a sua escolha,,Reação,Cozinheiro,Imediato,Receita
+Petisco Doce,,,"- 1 Punhado de açúcar
+",,Reação,Cozinheiro,Imediato,Receita
+Empilhando Vitórias,,,,,"Morrendo, Passivo","Aventureiro, Combatente, Livre",,Habilidade Característica
+Resistência Vitoriosa,,,,,Passivo,Combatente,,Habilidade
+Vitória Assassino,,,- 1 ponto de Vitória,,Livre,Combatente,Imediato,Habilidade
+Pausa Para Respirar,,,-  2 de Energia,,Ação,Combatente,Imediato,Habilidade
+Surto de Combate,,,- 3 pontos de Vitória,,Livre,Combatente,Imediato,Habilidade
+Golpe Vitórioso,,,,,Passivo,Combatente,,Habilidade
+Esquiva Vitoriosa,,,-1 ponto de Vitória,,Reação,Combatente,,Habilidade
+Vitória Mantida,,,,,Passivo,Combatente,,Habilidade
+Vitória da Sorte,,,,,Passivo,Combatente,,Habilidade
+Práticas de Medicina,Corpo a Corpo,,,,Ação,"Aventureiro, Livre, Médico",,Habilidade Característica
+Cura de Batalha,,,,,Passivo,Médico,,Habilidade
+Primeiros Socorros,Corpo a Corpo,,- 1 Carga de “Kit de medicina”,,Ação,Médico,1 Turno,Habilidade
+Esteroides,,,- 2 Cargas de “Kit de medicina”,,Descanso,Médico,2 Horas,Receita
+Cirurgia de Restauração,,,- 1 Carga de “Kit de medicina”,,Descanso,Médico,8 horas,Habilidade
+Anestesia,,,- 2 Cargas de “Kit de Medicina”,,Descanso,Médico,2 Horas,Receita
+"Antidoto ",,,"- 1 Carga do “Kit de Medicia”
+- Uma amostra do veneno a ser curado.",,Descanso,Médico,2 Horas,Receita
+Tratar condição,,,- 1 Carga do “Kit de Medicina”,,Reação,Médico,Imediato,Habilidade
+Instalar Prótese,,,"- 1 Carga do “Kit de Medicina”
+- 1 Prótese",,Descanso,Médico,8 horas,Habilidade
+Movido pela glória,,,,,Livre,Gladiador,,Habilidade
+Trabalho na Forja,,,,,Descanso,"Aventureiro, Forjador, Livre","2 Horas, 4 horas, 8 horas",Habilidade Característica
+Martelar o ferro,Corpo a Corpo,,-3 de energia,,Ação,Forjador,,Golpe
+Forja Mágica,,,"5 de energia, 2 cargas do kit.",,Evolução,Forjador,8 horas,Habilidade
+Martelar com Força,,,,,Passivo,Forjador,,Habilidade
+"Munição Explosiva ",,,1 Carga do kit a cada 3,,Descanso,Forjador,2 Horas,Receita
+"Munição Incandescente ",,,1 Carga do kit a cada 3,,Descanso,Forjador,2 Horas,Receita
+"Forja Criadora ",,,3 Cargas do Kit,,Evolução,Forjador,8 horas,Habilidade
+Criação Aprimorada,,,1 Carga do kit,,Evolução,Forjador,,Habilidade
+Criação Mágica,,,1 Carga do kit,,Evolução,Forjador,,Habilidade
+Dracônico,,,,,,"Arqueólogo, Dracônico",,Língua
+Olímpico,,,,,,Arqueólogo,,Língua
+Trabalho de Tradução,,,,,Descanso,Arqueólogo,4 horas,Habilidade
+Caçador de Relíquias,,,,,Passivo,Arqueólogo,,Habilidade
+Poder Ancestral,,,,,Passivo,Arqueólogo,,Habilidade
+Reconhecer Figuras Históricas,,,,,Passivo,Arqueólogo,,Habilidade
+Mapear,,,,,Descanso,Arqueólogo,4 horas,Receita
+Mergulhar nas sombras,Em Cena,Ligação += 13,4 de energia ao mergulhar,,"Ação, Livre, Reação","Magia das Sombras, Pacto das Sombras",,Habilidade
+Troca Sombria,Em Cena,Ligação += 12,3 de energia,,Reação,"Magia das Sombras, Pacto das Sombras",Imediato,Habilidade
+Pacto das Sombras,Si Mesmo,,,,Evolução,"Cultista, Pacto das Sombras",,Habilidade
+Dimensão de Sombras,,Ligação += 15,5 de energia por turno ativo,,Ação,Pacto das Sombras,Imediato,Habilidade
+Evocar sombra,,Ligação += 1,"1 de energia ",,Ação,"Magia das Sombras, Pacto das Sombras",,Habilidade
+Caminho sem Volta,,Ligação += 15,,,Evolução,Pacto das Sombras,,Habilidade
+Pacto,,,,,Passivo,"Cultista, Livre",,Habilidade Característica
+Sombra Possessiva,,,,,Evolução,Pacto das Sombras,,Habilidade
+Sombra Arrogante,,,,,Evolução,Pacto das Sombras,,Habilidade
+Sombra Furiosa,,,,,Evolução,Pacto das Sombras,,Habilidade
+Sombra Faminta,,,,,Evolução,Pacto das Sombras,,Habilidade
+Sombra Controladora,,,,,Evolução,Pacto das Sombras,,Habilidade
+Sombra Acumuladora,,,,,Evolução,Pacto das Sombras,,Habilidade
+"Sombra Indiferente ",,,,,Evolução,Pacto das Sombras,,Habilidade
+Visão Analítica,,,,,Passivo,Mago,Imediato,Habilidade
+Esforço sanguíneo,Si Mesmo,,1d6 de vida,,Livre,Hemomancia,Imediato,Habilidade
+"Romper Veia ",Médio,,"2 de vida, 1 de energia.",,Reação,Hemomancia,Imediato,Magia
+Armadura de Sangue,Corpo a Corpo,,"5 de vida e 5 de energia, por turno ativo.",,"Ação, Reação",Hemomancia,Imediato,Magia
+Sangria Absoluta,Médio,,,,Passivo,Hemomancia,Imediato,Habilidade
+Despedida Escarlate,Si Mesmo,,5 de energia,,"Ação, Morrendo",Hemomancia,Imediato,Magia
+Deus do sangue,Em Cena,Pertencente ao Deus Amon,,,Passivo,Hemomancia,Imediato,Técnica inigualável
+Coagular,Médio,,2 de energia,,Reação,Hemomancia,Imediato,Magia
+Disparo de Sangue,Longo,,"6 de vida, 2 de energia.",,Ação,Hemomancia,Imediato,Magia
+Poça de Sangue,Em Cena,,"10 de vida, 2 de energia.",,Ação,Hemomancia,,Magia
+Infectar Sangue,,,,,Passivo,Hemomancia,,Habilidade
+Corte de Sangue,Corpo a Corpo,,"4 de vida, 2 de energia",,Ação,Hemomancia,,Golpe
+Surto de Adrenalina,Si Mesmo,,,,Livre,Hemomancia,,Habilidade
+Hemocinese,Em Cena,,1 de energia,,"Ação, Livre, Movimento, Reação",Hemomancia,Imediato,Magia
+Controle Do Fluxo,Si Mesmo,,,,Passivo,Hemomancia,,Habilidade
+Construto de sangue (Incompleto),,,Vida igual a vida do construto invocado.,,"Ação, Descanso, Reação",Hemomancia,"1 Turno, 8 horas, Imediato","Compania, Magia"
+Reconstruir Carne,Médio,,"3 de vida, 3 de energia. (+3 de vida por uso)",,Ação,Hemomancia,Imediato,Magia
+"Hemorragia ",Médio,,"2 de energia ",,Ação,Hemomancia,Imediato,Magia
+Sangria Universal,,,,,Passivo,Hemomancia,,Habilidade
+Criar Sangue,Si Mesmo,,1 de energia por cada 1 de vida convertida.,,Ação,Hemomancia,Imediato,Habilidade
+Corpo de Vampiro,Si Mesmo,,,,Evolução,Vampiro,,Habilidade Inata
+Conquistar o Sol,Si Mesmo,,,,Evolução,Vampiro,,Habilidade Inata
+Derramar Sangue,Si Mesmo,,,,Passivo,Hemomancia,,Habilidade
+"Sangue Incontrolável ",Si Mesmo,,,,Passivo,Hemomancia,,Habilidade
+Caminho do Cavaleiro,Si Mesmo,,,,Passivo,"Cavaleiro, Livre",,Habilidade Característica
+Tomar a Frente,Si Mesmo,,,,Passivo,Cavaleiro,Imediato,Habilidade
+Montaria Leal,Si Mesmo,,,,Passivo,Cavaleiro,,Compania
+Liderança Montada,"Em Cena, Si Mesmo",,,,Passivo,Cavaleiro,,"Compania, Habilidade"
+"Corte Giratório ","Corpo a Corpo, Longo, Médio",,3 de energia,,Ação,Cavaleiro,,Golpe
+"Ataque montado ",Si Mesmo,,,,Passivo,Cavaleiro,Imediato,Habilidade
+Deixa que eu te defendo,Movimento,,2 de energia,,Reação,Cavaleiro,Imediato,Habilidade
+Flagelo,Si Mesmo,,,,Morrendo,Hemomancia,Imediato,Habilidade
+Armadura de Espinhos,Corpo a Corpo,,,,Passivo,Cavaleiro,,Habilidade
+Punho firme,Si Mesmo,,,,Passivo,Cavaleiro,,Habilidade
+Cavalaria Armadurada,Si Mesmo,,,,Passivo,Cavaleiro,,"Compania, Habilidade"
+Não Vai Passar,Movimento,,,,Reação,Cavaleiro,Imediato,Habilidade
+Capacetada,Corpo a Corpo,,2 de energia,,Ação,Cavaleiro,Imediato,Golpe
+"inderrubável ",Si Mesmo,,,,Passivo,Cavaleiro,Imediato,Habilidade
+Discurso na fogueira,Em Cena,,,,Descanso,Cavaleiro,4 horas,Habilidade
+Armadura Quebrada,Si Mesmo,,,,Morrendo,Cavaleiro,Imediato,Habilidade
+Pela Honra dos Caídos,Si Mesmo,,,,Passivo,Cavaleiro,,Habilidade
+Avante !!!,Si Mesmo,,4 de energia,,Ação,Cavaleiro,Imediato,Habilidade
+Sacrificar Escudo,Corpo a Corpo,,3 de energia,,Reação,Cavaleiro,Imediato,Habilidade
+Ordem Rápida,Em Cena,,,,Reação,Cavaleiro,Imediato,Habilidade
+Veterano Carrasco,Em Cena,,,,Passivo,Cavaleiro,Imediato,Habilidade
+Observação rápida,Em Cena,,,,Turno,Caçador,Imediato,Habilidade
+Companheiro Animal,Si Mesmo,,,,Evolução,Caçador,,Compania
+Mestre de Matilha,Si Mesmo,,,,Evolução,Caçador,,Compania
+"Ordem Do Leviatan ",Si Mesmo,,,,Passivo,Caçador,,Técnica inigualável
+Mestre de feras,Si Mesmo,,,,Evolução,Caçador,,Compania
+Caçada múltipla,Si Mesmo,,,,Evolução,Caçador,,Habilidade
+Caça Valiosa,,,,,Passivo,Caçador,,Habilidade
+Caça Revigorante,Si Mesmo,,,,Passivo,Caçador,,Habilidade
+Acerto de Rastreio,,,,,Passivo,Caçador,Imediato,Habilidade
+Abater Presa,,,4 de energia,,Ação,Caçador,Imediato,Habilidade
+"Implantar Armadilha ",,,,,Descanso,Caçador,Minutos,Habilidade
+Implantação rápida,,,"2 de energia ",,Ação,Caçador,Imediato,Habilidade
+"Caçador Resistente ",,,,,Passivo,Caçador,Imediato,Habilidade
+Amuleto da Caçada,,,Troféu de Caça,,Descanso,Caçador,4 horas,Receita
+Noção do Caçador,,,,,Passivo,Caçador,Imediato,Habilidade
+Ataque Debilitante,,,,,Ação,Caçador,Imediato,Habilidade
+Relíquias das Caças,,,,,Passivo,Caçador,Imediato,Habilidade
+Armadilha Perfurante,,,1 objeto perfurante,,Descanso,"Caçador, Malandro",1 Hora,Receita
+Armadilha de Concussão,,,1 objeto pesado,,Descanso,"Caçador, Malandro",1 Hora,Receita
+"Armadilha Inflamável ",,,"Material inflamável, fonte de fogo.",,Descanso,Malandro,1 Hora,Receita
+Dardo venenoso,,,"Dardos, Frasco de veneno",,Descanso,Caçador,2 Horas,Receita
+"Técnicas de Sobrevivência ",,,,,Passivo,Caçador,,Habilidade
+"Modo Berserker ",Si Mesmo,,,,Turno,"Berserker, Livre",,Habilidade Característica
+Sangue de Soldado,Si Mesmo,,"- 1 bebida alcoólica
+- 1 Pimenta Vermelha",,Descanso,Berserker,2 Horas,Receita
+Fúria imortal,Si Mesmo,,,,Morrendo,Berserker,,Habilidade
+Fúria Inacabável,Si Mesmo,,,,Passivo,Berserker,,Habilidade
+Armadura de Músculos,,,,,Passivo,Berserker,,Habilidade
+Urro Furioso,Em Cena,,"- 4 de energia
+- 2 de Fúria",,Ação,Berserker,,Música
+Quanto maior Melhor,,,,,Passivo,Berserker,,Habilidade
+Sequência Mortal,,,1 de energia,,Reação,Berserker,,Habilidade
+Descontrole,Si Mesmo,,3 de Energia,,Ação,Berserker,,Habilidade
+Probabilidade Mortal,,,,,Passivo,Berserker,,Habilidade
+Guerreiro Empático,,,,,Passivo,Berserker,,Habilidade
+Massacre,Si Mesmo,,1 de energia,,Passivo,Berserker,,Habilidade
+Fúria Imparável,Si Mesmo,,,,Passivo,Berserker,,Habilidade
+Descontar Raiva,,,- 2 de Fúria,,Livre,Berserker,Imediato,Habilidade
+Experiência de Pilhagem,,,,,Passivo,Berserker,,Habilidade
+Movido Pelo ódio,,,,,Movimento,Berserker,,Habilidade
+Mana Furiosa,,,,,Passivo,Berserker,Imediato,Habilidade
+Acúmulo de vigor,,,,,Passivo,Berserker,Imediato,Habilidade
+Até a Falha,Corpo a Corpo,,Consome toda fúria e energia,,Ação,Berserker,,Golpe
+Fúria Ociosa,,,,,Passivo,Berserker,,Habilidade
+Calma Gradual,,,,,Passivo,Berserker,Imediato,Habilidade
+Vigor Pós Luta,,,,,Passivo,Berserker,Imediato,Habilidade
+Explosão Controlada,Si Mesmo,,,,"Evolução, Passivo",Berserker,,Habilidade
+"Estilo da Espada dançante ",,,,,"Movimento, Passivo",Samurai,,Técnica inigualável
+Devolver Projétil,Médio,,,,Passivo,Samurai,Imediato,Habilidade
+Aparar e Cortar,Corpo a Corpo,,1 de energia,,Reação,Samurai,Imediato,Golpe
+Aparar,,,,,Reação,Samurai,Imediato,Habilidade
+Aprimorar Aparar,,,,,Evolução,Samurai,,Habilidade
+Caminho do Samurai,Si Mesmo,,,,Passivo,"Livre, Samurai",,Habilidade Característica
+Domínio do Espadachim,,,3 de energia,,Ação,Samurai,,Habilidade
+Golpes Leves,,,,,Passivo,Samurai,,Habilidade
+Seppuku,,,,,Descanso,Samurai,8 horas,Ritual
+Ataques Letais,,,,,Passivo,Samurai,,Habilidade
+Ataques Precisos,,,,,Passivo,Samurai,,Habilidade
+Empunhadura Dupla,,,,,Passivo,Samurai,,Habilidade
+Passo Errante,,,,,Movimento,Samurai,,Habilidade
+Avanço Cortante,,,4 de energia,,Ação,Samurai,,Golpe
+Espirito Inquebrável,,,,,Morrendo,Samurai,,Habilidade
+Caminho do Meio,,,,,Evolução,Samurai,,Habilidade
+aPARar,,,,,Passivo,Samurai,,Habilidade
+"Bater e Correr ",,,,,Movimento,Samurai,,Habilidade
+Posicionar e Mirar,,,,,Passivo,"Livre, Mosqueteiro",,Habilidade Característica
+Tiro Perfurante,,,,,Passivo,Mosqueteiro,,Habilidade
+Chute Frontal,Corpo a Corpo,,3 de energia,,Ação,Mosqueteiro,,Golpe
+Pente Rápido,,,,,Livre,Mosqueteiro,,Habilidade
+Coronhada,Corpo a Corpo,,2 de energia.,,Reação,Mosqueteiro,,Golpe
+Tiro de Aviso,Em Cena,,,,Reação,Mosqueteiro,,Habilidade
+Otimizar Tempo,,,,,Ação,Mosqueteiro,,Habilidade
+Disparo Anti-Bunker,,,3 de energia,,Ação,Mosqueteiro,,Disparo
+Fire in The hole,,,,,Livre,Mosqueteiro,,Habilidade
+Detonação Antecipada,,,,,Reação,Mosqueteiro,Imediato,Disparo
+Headshot,,,,,Passivo,Mosqueteiro,,Habilidade
+Substituição Veloz,,,,,Livre,Mosqueteiro,Imediato,Habilidade
+Saque rápido,,,2 de energia.,,Livre,Mosqueteiro,,Habilidade
+Letalidade Garantida,,,,,Livre,Mosqueteiro,,Habilidade
+Atirador de Elite,Longo,,,,Passivo,Mosqueteiro,,Habilidade
+Descanso Protegido,,,,,Passivo,Mosqueteiro,,Habilidade
+Alvo Vulnerável,,,2 de energia,,Livre,Mosqueteiro,,Disparo
+Posicionamento Mortal,,,,,Evolução,Mosqueteiro,,Habilidade
+Munição improvisada,,,,,Ação,Mosqueteiro,,Habilidade
+Ordem de Marcha,,,,,Movimento,Mosqueteiro,,Habilidade
+Olhos de Águia,,,,,Passivo,Mosqueteiro,,Habilidade
+Rolamento Tático,,,,,Livre,Mosqueteiro,,Habilidade
+Caitar,,,,,Movimento,Mosqueteiro,,Disparo
+Descarregar Pente,,,6 de energia,,"Ação, Reação",Mosqueteiro,,Disparo
+Minha Última Magia,,,,,"Livre, Morrendo",Mago,Imediato,Habilidade
+Herança Mágica,,,,,Passivo,"Enfeitiçado, Livre",,Habilidade Característica
+Herança Diversa,,,,,Evolução,Enfeitiçado,,Habilidade
+Multi-Alvo,,,5PP,,Evolução,Enfeitiçado,,Habilidade
+Aprendizado Prático,,,8PPs,,Descanso,Enfeitiçado,8 horas,Habilidade
+Treinamento Mágico,,,5 mana,,Descanso,Enfeitiçado,4 horas,Habilidade
+Evolução Facilitada,,,,,Passivo,Enfeitiçado,,Habilidade
+Adaptação Mágica,,,,,Passivo,Enfeitiçado,,Habilidade
+Prática Avançada,,,,,Passivo,Enfeitiçado,,Habilidade
+Feiticeiro Supremo,,,,,Passivo,Enfeitiçado,,Habilidade
+Conjuração instintiva,,,10 PPs,,Ação,Enfeitiçado,,Habilidade
+Último Feitiço,,,8PP por turno ativo,,Morrendo,Enfeitiçado,,Habilidade
+Feitiço de Fortalecimento,,,5PP por turno ativo,,Ação,Enfeitiçado,,Habilidade
+Incendiar Arma,Em Cena,,3 de energia,,Ação,Magia de Fogo,,Magia
+Bola de Fogo,Longo,,4 de energia,,Ação,Magia de Fogo,,Magia
+Serpente Flamejante,Longo,,5 de energia,,Ação,Magia de Fogo,,Magia
+Corpo de Fogo,Si Mesmo,,2 de energia,,Reação,Magia de Fogo,,Magia
+Superaquecer,Universal,,3 de energia,,Ação,Magia de Fogo,,Magia
+Euforia Flamejante,Si Mesmo,,,,Passivo,Magia de Fogo,,Magia
+Manifestar Fogo,Médio,,1 de energia,,Ação,Magia de Fogo,,Magia
+Cauterizar,Médio,,3 de energia,,Ação,Magia de Fogo,,Magia
+Hidra Flamejante,,,,,Evolução,Magia de Fogo,,Magia
+Evaporar,Corpo a Corpo,,2 de energia,,Reação,Magia de Fogo,,Magia
+Liberar Superaquecimento,,,5 de energia,,Ação,Magia de Fogo,,Magia
+Cortina de Fumaça,,,4 de energia,,Ação,Magia de Fogo,,Magia
+Absorver Calor,Si Mesmo,,,,Passivo,Magia de Fogo,,Magia
+Explosão,Corpo a Corpo,,3 de energia,,Reação,Magia de Fogo,,Magia
+Erupção,Médio,,7 de anergia,,Ação,Magia de Fogo,,Magia
+Fogo Sombrio,,,,,Passivo,"Magia das Sombras, Magia de Fogo",,Habilidade
+Parede de Fogo,,,4 de energia,,Ação,Magia de Fogo,,Magia
+Propulsão,,,2 de energia por turno ativo,,Ação,Magia de Fogo,,Magia
+Punição Flamejante,Em Cena,,4 de energia,,Ação,Magia de Fogo,,Magia
+Penas Da Fênix,Longo,,2 de energia,,Reação,"Fogo Sagrado, Magia de Fogo",,Magia
+Renascer Das Cinzas,,,,,Morrendo,"Fogo Sagrado, Magia de Fogo",,Magia
+Marca Da Fênix,,,,,"Evolução, Passivo",Magia de Fogo,,Magia
+Sol de Bolso,Em Cena,,3 de energia por turno ativo.,,Ação,"Magia de Fogo, Magia de Luz",,Magia
+Manifestar Ar,Médio,,1 de energia,,Ação,Magia de Vento,,Magia
+Manipular Projéteis,Longo,,1 de energia,,Reação,Magia de Vento,,Magia
+Foice de Vento,Longo,,4 de energia,,Ação,Magia de Vento,,Magia
+Lufada de Vento,Médio,,5 de Energia,,Ação,Magia de Vento,,Magia
+Armadura de Vento,Si Mesmo,,4 de energia por turno ativo,,Reação,Magia de Vento,,Magia
+Passo da Ventania,Si Mesmo,,3 de energia,,"Movimento, Reação",Magia de Vento,,Magia
+Golpe de Ar,Longo,,2 de energia,,Livre,Magia de Vento,,Magia
+Corrente Circular,Longo,,1 de energia por turno ativo,,Reação,Magia de Vento,,Magia
+Corrente Cortante,Em Cena,,3 de energia,,Ação,Magia de Vento,,Magia
+Cristalizar,Si Mesmo,,,,Passivo,Magia de Cristal,,Habilidade
+Ventos Revigorantes,Longo,,4 de energia,,Ação,Magia de Vento,,Magia
+Sufocamento,Médio,,3  de energia+ 2 por turno ativo,,Ação,Magia de Vento,,Magia
+Corrente Descendente,Médio,,5 de energia,,Ação,Magia de Vento,,Magia
+Corpo de Vento,Si Mesmo,,4 de energia,,Reação,Magia de Vento,,Magia
+Andar no céu,Si Mesmo,,,,Reação,Magia de Vento,,Magia
+Assovio do vento,Em Cena,,5 de energia,,Ação,Magia de Vento,,"Magia, Música"
+Ar Puro,Si Mesmo,,,,Reação,Magia de Vento,,Magia
+Aprender com a Natureza,,,,,Aprender,Monge,,Habilidade
+Golpe Redemoinho,Médio,,5 de energia,,Ação,Magia de Vento,,Magia
+Corrente de Tranferência,Longo,,4 de energia,,Ação,Magia de Vento,,Magia
+Corpo de Pedra,Médio,,3 de energia,,Reação,Magia de Terra,,Magia
+Mão de Pedra,Médio,,3 de energia,,Reação,Magia de Terra,,Magia
+Postura de Monolito,Si Mesmo,,,,Passivo,Magia de Terra,,Magia
+Radar Sísmico,Em Cena,,4 de energia,,Ação,Magia de Terra,Imediato,Magia
+Areia Movediça,Médio,,6 de energia,,Ação,Magia de Terra,,Magia
+Mergulhar na terra,,,2 de energia,,Ação,Magia de Terra,,Magia
+Puxar o pé,Corpo a Corpo,,2 de energia,,Ação,Magia de Terra,,Magia
+Muro de Pedra,Médio,,5 de energia,,Ação,Magia de Terra,,Magia
+Espinhos de Pedra,Médio,,4 de energia,,Ação,Magia de Terra,,Magia
+Prisão de pedra,Médio,,5 de energia,,Ação,Magia de Terra,,Magia
+Movimento de Toupeira,Si Mesmo,,,,Passivo,Magia de Terra,,Habilidade
+"Indestrutível ",Si Mesmo,,,,Passivo,Magia de Terra,,Técnica inigualável
+Bloqueio sólido,Si Mesmo,,,,Passivo,Magia de Terra,,Habilidade
+Impacto Meteoro,,,6 de energia,,Ação,Magia de Terra,,Magia
+Pilares de Pedra,Em Cena,,5 de energia,,Ação,Magia de Terra,,Magia
+Destruir Rocha,Corpo a Corpo,,4 de energia,,Ação,Magia de Terra,,Magia
+Terremoto,Médio,,7 de energia,,Ação,Magia de Terra,,Magia
+Arremesso de Pedregulho,Médio,,5 de energia,,Ação,Magia de Terra,,Magia
+Rolamento de Rocha,Longo,,4 de energia,,Ação,Magia de Terra,,Magia
+Movimento tectônico,Em Cena,,3 de energia,,Ação,Magia de Terra,,Magia
+Punhal de Kaiser,Médio,,,,Evolução,Magia de Terra,,Técnica inigualável
+Gerador de Pedras,Si Mesmo,,,,Passivo,Magia de Terra,,Habilidade
+Moldador de Rochas,Médio,,2 de energia,,Reação,Magia de Terra,,Magia
+Manifestar Terra,Médio,,1 de mana,,Ação,Magia de Terra,,Magia
+Banho de Lama,,,,,Descanso,Magia de Terra,8 horas,Magia
+Sentir o vento,Em Cena,,,,Passivo,Magia de Vento,,Magia
+Manifestar Água,Médio,,1 de energia,,Ação,Magia de Água,,Magia
+Condensar Humidade,,,,,Passivo,"Magia de Gelo, Magia de Água",,Magia
+Criar Chuva,Em Cena,,5 de energia,,Ação,Magia de Água,,Magia
+Jato perfurante,Longo,,3 de energia,,Ação,Magia de Água,,Magia
+Fluxo cortante,Corpo a Corpo,,2 de energia,,Ação,Magia de Água,,Magia
+Água é vida,Em Cena,,4 de energia,,Reação,Magia de Água,,Magia
+Limpeza completa,Médio,,3 de energia,,Ação,Magia de Água,,Magia
+Braços d’água,Médio,,4 de energia,,Ação,Magia de Água,,Magia
+Prisão do Afogamento,Médio,,3 + 1 por turno ativo.,,Ação,Magia de Água,,Magia
+Peso da água,Em Cena,,,,Passivo,Magia de Água,,Magia
+Espinhos de água,,," 4 de energia",,Ação,Magia de Água,,Magia
+Pulmão Aquático,,,,,Passivo,Magia de Água,,Habilidade
+Ligação com a Água,Si Mesmo,,,,Passivo,Magia de Água,,Magia
+Filhos do Mar,Em Cena,,,,Passivo,Magia de Água,,Magia
+Fortalecimento da Águas,Em Cena,,5 de energia,,Ação,Magia de Água,,Magia
+Molhar o dano,Em Cena,,,,Passivo,Magia de Água,,Magia
+Chuva ácida,Em Cena,,,,Evolução,Magia de Água,,Magia
+Bolha de Restauração,Corpo a Corpo,,4 +2 por turno ativo,,Ação,Magia de Água,,Magia
+Águas mansas,,,,,Descanso,Magia de Água,2 Horas,Magia
+Escaldar,Médio,,5 de energia,,Ação,Magia de Água,,Magia
+Banho de Água fria,Médio,,5 de energia,,Ação,Magia de Água,,Magia
+Tsunami,Médio,,8 de ativação + 2 por turno de espera.,,Ação,Magia de Água,,Magia
+Nevasca,Em Cena,,4 de energia por rodada.,,Ação,Magia de Gelo,,Magia
+"Raio, Relâmpago e Trovão",Em Cena,,12 de energia,,Ação,Magia de Raio,,Magia
+Marca do Oceano,,,,,Passivo,Magia de Água,,Habilidade
+Raio Congelante,Médio,,4 de energia,,Ação,Magia de Gelo,,Magia
+Forja Fria,Corpo a Corpo,,3 de energia,,Ação,Magia de Gelo,,Magia
+Chão Congelado,Médio,,5 de energia,,Ação,Magia de Gelo,,Magia
+Extinção Glacial,Médio,,6 de energia,,Ação,Magia de Gelo,,Técnica inigualável
+Crepitar Gelado,Médio,,2 de energia,,Reação,Magia de Gelo,,Magia
+Parede de gelo,Médio,,5 de energia,,Ação,Magia de Gelo,,Magia
+Surf no Gelo,Si Mesmo,,,,Passivo,Magia de Gelo,,Habilidade
+Resfriamento,Si Mesmo,,3 de energia,,Ação,Magia de Gelo,,Magia
+Névoa Gélida,,,5 de energia,,Descanso,Magia de Gelo,1 Hora,Magia
+Corpo Frio,Si Mesmo,,,,Passivo,Magia de Gelo,,Habilidade
+Túmulo de Gelo,Médio,,4 de energia,,Ação,Magia de Gelo,,Magia
+Refresco,Corpo a Corpo,,3 de energia,,Reação,Magia de Gelo,,Magia
+Frostbite,,,,,Passivo,Magia de Gelo,,Habilidade
+Espelho de Diamante,Si Mesmo,,5 de energia,,Reação,Magia de Gelo,,Magia
+Reflexo Gélido,Corpo a Corpo,,4 de energia,,Ação,Magia de Gelo,,Magia
+Marionete Gélida,Em Cena,,,,Evolução,Magia de Gelo,,Magia
+Reflexo de Cristal,Corpo a Corpo,,5 de energia,,Ação,Magia de Cristal,,Magia
+Espelho de Cristal,Si Mesmo,,7 de Energia,,Reação,Magia de Cristal,,Magia
+Marionete de Cristal,,,,,Evolução,Magia de Cristal,,Magia
+Sarcófago de Gelo,,,3 de energia,,"Ação, Passivo",Magia de Gelo,,Magia
+Punição Gélida,Em Cena,,,,Passivo,Magia de Gelo,,Habilidade
+0 Absoluto,,,,,Passivo,Magia de Gelo,,Habilidade
+Manifestar Gelo,Médio,,1 de  energia,,Ação,Magia de Gelo,,Magia
+Manifestar Raio,Médio,,1 de energia,,Ação,Magia de Raio,,Magia
+Manifestar Luz,Longo,,1 de energia,,Reação,Magia de Luz,,Magia
+Reflexo Relâmpago,Si Mesmo,,4 por turno ativo,,Reação,Magia de Raio,,Magia
+Raio,Longo,,2 de energia,,Ação,Magia de Raio,,Magia
+Golpe Relâmpago,Corpo a Corpo,,6 de energia,,Ação,Magia de Raio,,"Golpe, Magia"
+Carga Elétrica,Si Mesmo,,3 de energia,,Ação,Magia de Raio,,Magia
+Carga Persistente,Si Mesmo,,,,Passivo,Magia de Raio,,Habilidade
+Corrente Alternada,Si Mesmo,,,,Passivo,Magia de Raio,,Habilidade
+Corrente Contínua,Si Mesmo,,,,Passivo,Magia de Raio,,Habilidade
+Acúmulo de Tensão,Si Mesmo,,,,Passivo,Magia de Raio,,Habilidade
+Passo Luz,,,3 de energia,,Movimento,"Magia de Luz, Magia de Raio",,Magia
+Descarga Elétrica,Corpo a Corpo,,0,,Ação,Magia de Raio,,Magia
+Descarga Direcionada,Em Cena,,,,Evolução,Magia de Raio,,Magia
+Sentido Magnético,Em Cena,,,,Passivo,Magia de Raio,,Magia
+Eletricidade Estática,Si Mesmo,,,,Movimento,Magia de Raio,,Magia
+Aterramento,Si Mesmo,,,,Passivo,Magia de Raio,,Habilidade
+Absorver Corrente,Corpo a Corpo,,,,Reação,Magia de Raio,,Magia
+Vantagem Elemental,,,,,Passivo,Magia de Raio,,Magia
+Relâmpago,Si Mesmo,,,,Passivo,Magia de Raio,,Magia
+Raio Bola,Médio,,4 + 2 por turno ativo.,,Ação,Magia de Raio,,Magia
+Corrente Relâmpago,Médio,,3 + 1 por alvo extra.,,Ação,Magia de Raio,,Magia
+Conversor Elétrico,Si Mesmo,,,,Passivo,Magia de Raio,,Habilidade
+Invisibilidade,Si Mesmo,,3 de mana por turno ativo,,Ação,Magia de Luz,,Magia
+Ilusão de ótica,Em Cena,,3 de energia + 1 por turno ativo,,Ação,Magia de Luz,,Magia
+Reflexos Vivos,Corpo a Corpo,,5 de energia,,Ação,Magia de Luz,,Magia
+Feixe Laser,Em Cena,,5 de energia,,Ação,Magia de Luz,,Magia
+Emissão Amplificada,Em Cena,,7 de energia,,Ação,Magia de Luz,,Magia
+Ondas de Rádio,Universal,,,,Passivo,Magia de Luz,,Magia
+Onda de Calor,Médio,,5 de energia,,Ação,Magia de Luz,,Magia
+Visão Infra-vermelho,,,,,Passivo,Magia de Luz,,Habilidade
+Visão de Raio-x,,,,,Passivo,Magia de Luz,,Habilidade
+Ataque de Radiação,Longo,,5 de energia,,Ação,Magia de Luz,,Magia
+Onda Radioativa,Médio,,6 por turno ativo.,,Ação,Magia de Luz,,Magia
+Irradiar,Médio,,,,Passivo,Magia de Luz,,Magia
+Conversão Fotovoltaica,Si Mesmo,,,,Passivo,Magia de Luz,,Magia
+Flash Bang,Em Cena,,3 de energia.,,Ação,Magia de Luz,,Magia
+Luz Potente,,,,,Passivo,Magia de Luz,,Magia
+Corte Luminescente,Em Cena,,4 de mana,,Ação,Magia de Luz,,Magia
+Luz Purificadora,Em Cena,,3 de energia,,Reação,Magia de Luz,,Magia
+Luz e Escuridão,,,,,Livre,"Magia das Sombras, Magia de Luz",,Habilidade
+Forja Cristalina,Corpo a Corpo,,5 de energia,,Ação,Magia de Cristal,,Magia
+Armadura de Cristal,Si Mesmo,,,,Passivo,Magia de Cristal,,Habilidade
+Execução Celeste,Médio,,,,Ação,Magia de Cristal,,Magia
+Reciclagem de Cristais,Em Cena,,,,Passivo,Magia de Cristal,,Habilidade
+Reparar Cristal,,,4 de Energia,,Reação,Magia de Cristal,,Magia
+Sepultura de Cristal,Corpo a Corpo,,X,,Ação,Magia de Cristal,Imediato,"Magia, Técnica inigualável"
+Pele de Cristal,Médio,,6 de energia,,Ação,Magia de Cristal,,Magia
+Muralha de Cristal,Médio,,7 de energia,,Ação,Magia de Cristal,,Magia
+Disparo de Cristal,Longo,,1 de energia,,Reação,Magia de Cristal,,Magia
+Olhos de Cristal,,,,,Passivo,Magia de Cristal,,Habilidade
+Cristalização Eficiente,,,,,Evolução,Magia de Cristal,,Habilidade
+Dimensão de Cristal,Em Cena,,30 de energia,,Turno,Magia de Cristal,,"Magia, Técnica inigualável"
+Prisão de Cristal,Médio,,8 de energia,,Ação,Magia de Cristal,,Magia
+Obelisco de Cristal,Médio,,8 de energia,,Ação,Magia de Cristal,,Magia
+Trocar Coordenadas,Em Cena,,4 de energia,,Ação,Magia Cósmica,,Magia
+Conhecimento Hermético,Si Mesmo,,,,Aprender,Alquimista,,Habilidade
+Atrasar Impacto,Médio,,6 de energia,,Ação,Magia Cósmica,,Magia
+Anti Vida,,Ligação = 1,,,Reação,"Necromancia, Pacto da Morte",Imediato,Habilidade
+Favorecer Morte,,Ligação = 13,,,Evolução,"Necromancia, Pacto da Morte",,Habilidade
+Dispersar espírito,,Ligação = 9,5 de energia,,Ação,"Necromancia, Pacto da Morte",,Magia
+Amaldiçoar Mortal,Em Cena,Ligação = 5,5 de energia,,Ação,"Necromancia, Pacto da Morte",,Ritual
+Uma Alma Por Outra,Corpo a Corpo,Ligação = 17,10 de Energia,,Morrendo,"Necromancia, Pacto da Morte",,Ritual
+Explosão espectral,Em Cena,,"X Almas, 3 de energia por explosão.",,Ação,Necromancia,,Técnica inigualável
+Manipulação de Almas,Em Cena,,,,"Passivo, Reação",Necromancia,,Técnica inigualável
+Receptáculo Vivente,Si Mesmo,,,,Passivo,Necromancia,,Técnica inigualável
+Consumir Luz,Em Cena,,5 de energia,,Ação,Magia das Sombras,,Magia
+Pulso Sombrio,Em Cena,,5 de energia,,Ação,Magia das Sombras,,Magia
+Capa das Sombras,Si Mesmo,,3 de energia,,Ação,Magia das Sombras,,Magia
+Pacto das Memórias,Si Mesmo,,,,Evolução,"Cultista, Pacto das Memórias",,Habilidade
+Plantar Memória,Em Cena,,2 de energia,,Ação,Magia da Mente,,Magia
+Brain Net,Em Cena,,3 de energia por turno ativo.,,Ação,Magia da Mente,,Magia
+Memórias de Dor,Si Mesmo,,,,Passivo,Magia da Mente,,Habilidade
+Controle Da mente,,,4 de energia,,Ação,Magia da Mente,,Magia
+Ler mentes,Em Cena,,,,Passivo,Magia da Mente,,Habilidade
+Vasculhar Memória,Em Cena,,3 de energia,,Ação,Magia da Mente,,Magia
+Conhecimento Forçado,,Ligação = 12,,,Livre,"Magia da Mente, Pacto das Memórias",,Habilidade
+"Onisciência ",Si Mesmo,Ligação = 18,,,Passivo,"Magia da Mente, Pacto das Memórias",,Técnica inigualável
+Mudar Energia,Si Mesmo,,,,Livre,Magia Cósmica,Imediato,Magia
+Absorver Energia,Si Mesmo,,,,Passivo,Magia Cósmica,,Magia
+Teletransporte,Em Cena,,4 de energia,,Reação,Magia Cósmica,Imediato,Magia
+Transporte Forçado,Em Cena,,,,Evolução,Magia Cósmica,Imediato,Magia
+Teletransporte Absoluto,Em Cena,,,,Evolução,Magia Cósmica,Imediato,Técnica inigualável
+Metalmorfose,Corpo a Corpo,,8 de energia,,Ação,Magia Cósmica,,Magia
+Acelerar Tempo,Médio,,5 de energia,,Ação,Magia Cósmica,,Magia
+Congelamento Temporal,Médio,,5 de energia por turno ativo,,Ação,Magia Cósmica,,Magia
+Retroceder,Em Cena,,2 de energia por turno marcado. 3 de energia ao retroceder.,,"Ação, Reação",Magia Cósmica,,Magia
+Ampliar Gravidade,Médio,,4 de energia + 3 por turno ativo.,,Ação,Magia Cósmica,,Magia
+Horizonte de Eventos,Si Mesmo,,,,Evolução,Magia Cósmica,,Habilidade
+Reversão de Gravidade,,,,,Evolução,Magia Cósmica,,Magia
+Empurrão Gravitacional,Longo,,6 de energia,,Ação,Magia Cósmica,,Magia
+Zona Temporal,Em Cena,,6 + 3 por turno ativo.,,Ação,Magia Cósmica,,Magia
+Liquefação,Corpo a Corpo,,6 de energia,,Ação,Magia Cósmica,,Magia
+Sentido Espacial,Si Mesmo,,,,Passivo,Magia Cósmica,,Habilidade
+Sentido Temporal,,,,,Passivo,Magia Cósmica,,Habilidade
+Sentido Material,,,,,Passivo,Magia Cósmica,,Habilidade
+Sentido Energético,,,,,Passivo,Magia Cósmica,,Habilidade
+Sopro de Vida,Médio,Ligação = 2,3 de energia,,Ação,"Druidismo, Pacto da Grande Mãe",,Magia
+Presença Pura,Corpo a Corpo,Ligação = 12,,,Livre,"Druidismo, Pacto da Grande Mãe",,Habilidade
+Regeneração,Si Mesmo,Ligação = 8,1 de energia,,Livre,"Druidismo, Pacto da Grande Mãe",,Habilidade
+Reanimar,Corpo a Corpo,Ligação = 20,10 de energia,,Turno,"Druidismo, Pacto da Grande Mãe",,Magia
+Fechar Cicatrizes,Corpo a Corpo,Ligação = 10,,,Descanso,"Druidismo, Pacto da Grande Mãe",4 horas,Ritual
+Pacto da Morte,Si Mesmo,,,,Evolução,"Cultista, Pacto da Morte",,Habilidade
+Ritual de Assimilação,,Ligação = 20,,,,Pacto das Memórias,,Técnica inigualável
+Encarnação Sombria,,Ligação = 20,,,,Pacto das Sombras,,
+Pacto da Grande Mãe,Si Mesmo,,,,Evolução,"Cultista, Pacto da Grande Mãe",,Habilidade
+Quebrar Pacto,,,,,Descanso,Cultista,Minutos,Habilidade
+Troca Equivalente,,,"1 de energia por hora, 1 acúmulo do arsenal por componente.",,Livre,"Alquimista, Livre",,Habilidade Característica
+Mestre Místico,Si Mesmo,,,,Evolução,Alquimista,,Habilidade
+Poção de Cura,,,"Um pouco de água, Ervas",,Descanso,Alquimista,2 Horas,Receita
+Poção de Mana,,,"Um pouco de água, Ervas, 2 de energia",,Descanso,Alquimista,2 Horas,Receita
+Poções maiores,,,,,Passivo,Alquimista,,Habilidade
+Fogo de Alquimista,,,"Pólvora, Peças de Metal",,Descanso,Alquimista,4 horas,Receita
+Hexagolem,,,"2 Peças de Metal, 3 de energia.",,Descanso,Alquimista,6 Horas,Receita
+Criar Quimera,,,2 criaturas voluntárias,,Descanso,Alquimista,8 horas,Receita
+Lealdade ao criador,,,,,Passivo,Alquimista,,"Compania, Habilidade"
+Quimerismo Avançado,,,,,Evolução,Alquimista,,Habilidade
+Mestre Alquímico,,,,,Aprender,Alquimista,,Habilidade
+Cura Magnética,Corpo a Corpo,,1 Acúmulo do Arsenal alquímico,,Ação,Alquimista,,"Magia, Ritual"
+Destino nas Cartas,,,,,Passivo,"Cartomante, Livre",,Habilidade Característica
+Decretos do Rei,,,,,Descanso,Cartomante,2 Horas,Habilidade
+Ataque de Cartas,Médio,,2 de energia,,Ação,Cartomante,,Habilidade
+Mão Quente,Médio,,4 de energia,,Ação,Cartomante,,Habilidade
+Mão Parceira,,,,,Evolução,Cartomante,,Habilidade
+Manter a Mão,,,,,Passivo,Cartomante,,Habilidade
+JackPot,Médio,,5 de energia,,Ação,Cartomante,,Habilidade
+Blefe,Si Mesmo,,,,Passivo,Cartomante,,Habilidade
+Decreto da Rainha,,,,,Evolução,Cartomante,,Habilidade
+Truque Do Bufão,,,,,Evolução,Cartomante,,Habilidade
+Dealer,,,3 de energia,,Livre,Cartomante,,Habilidade
+Embaralhar,,,,,Turno,Cartomante,,Habilidade
+Previsão,,,5 de energia,,Reação,Cartomante,,Habilidade
+Carta de Defesa,,,3 de energia,,Reação,Cartomante,,Habilidade
+Economizar Verba,,,,,Evolução,Cartomante,,Habilidade
+Passageiro do Destino,,,,,Morrendo,Cartomante,,Habilidade
+Eco da Apostas,,,5 de energia,,Livre,Cartomante,,Habilidade
+Apostar no Destino,,,5 de energia,,Livre,Cartomante,,Habilidade
+Apostando a Vida,,,4 de energia.,,Livre,Cartomante,,Habilidade
+Aposta em conjunto,,,,,Evolução,Cartomante,,Habilidade
+Ás na Manga,,,,,Passivo,Cartomante,,Habilidade
+Riqueza de Ouros,,,,,Passivo,Cartomante,,Habilidade
+Emoção de Copas,,,,,Passivo,Cartomante,,Habilidade
+Esforço de Paus,,,,,Passivo,Cartomante,,Habilidade
+Força de Espadas,,,,,Passivo,Cartomante,,Habilidade
+Mestre de Carteado,,,,,Passivo,Cartomante,,Habilidade
+Jogatina,,,,,Descanso,Cartomante,2 Horas,Habilidade
+Fim e Reinício,,,,,Passivo,Cartomante,,Habilidade
+Exploração Arqueológica,Em Cena,,,,Descanso,"Arqueólogo, Aventureiro, Livre",4 horas,Habilidade Característica

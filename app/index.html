@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forja de Fichas — Ficha completa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-aurora" aria-hidden="true"></div>
+  <header class="top-bar">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden="true">◇</span>
+      <div>
+        <h1>Forja de Fichas</h1>
+        <p class="tagline">Ficha numa só vista · Catálogo: <code>python app/build_catalog.py</code> · Supabase em breve</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button type="button" class="btn btn-ghost" id="btn-reset">Recomeçar</button>
+      <button type="button" class="btn btn-gold" id="btn-save">Salvar rascunho</button>
+    </div>
+  </header>
+
+  <div class="sheet-wrap">
+    <section class="card card-hero" aria-label="Resumo">
+      <div class="hero-grid">
+        <div>
+          <h2 class="card-title">Identidade</h2>
+          <div class="grid-form tight">
+            <label class="field">
+              <span>Nome</span>
+              <input type="text" id="nome" placeholder="Nome do personagem" autocomplete="off" />
+            </label>
+            <label class="field">
+              <span>Idade</span>
+              <input type="text" id="idade" placeholder="Ex.: 24 anos" />
+            </label>
+            <label class="field field-span-2">
+              <span>Local de origem</span>
+              <input type="text" id="localOrigem" placeholder="Cidade, reino, plano…" />
+            </label>
+            <label class="field field-span-2">
+              <span>Descrição</span>
+              <textarea id="descricao" rows="3" placeholder="Aparência, vícios, objetivos…"></textarea>
+            </label>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <h2 class="card-title">Resumo</h2>
+          <dl class="hero-dl">
+            <div><dt>Raça</dt><dd id="hud-raca">—</dd></div>
+            <div><dt>Classe</dt><dd id="hud-classe">—</dd></div>
+            <div><dt>Vida</dt><dd id="hud-vida">—</dd></div>
+            <div><dt>Energia</dt><dd id="hud-energia">—</dd></div>
+            <div><dt>Deck</dt><dd id="hud-deck-count">0</dd></div>
+            <div><dt>Origens ativas</dt><dd id="hud-origens-count">0</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <div class="sheet-grid">
+      <section class="card">
+        <h2 class="card-title">Raça e classe</h2>
+        <p class="card-hint">Alteram atributos, pools e origens obrigatórias (bloqueadas na lista abaixo).</p>
+        <div class="grid-form two-col tight">
+          <label class="field">
+            <span>Raça</span>
+            <select id="raca"></select>
+          </label>
+          <label class="field">
+            <span>Classe inicial</span>
+            <select id="classe"></select>
+          </label>
+        </div>
+        <p class="hint" id="raca-nota"></p>
+        <p class="hint" id="classe-baralho"></p>
+        <h3 class="sub-title">Atributos (raça + classe + livres)</h3>
+        <div class="attrs-grid" id="attrs-display"></div>
+        <div id="livres-wrap" class="livres-wrap hidden">
+          <p class="hint">Distribua <strong id="livres-total">3</strong> pontos (Doppelganger).</p>
+          <div class="attrs-grid" id="livres-inputs"></div>
+          <p class="hint livres-sum" id="livres-sum"></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">Vida, energia e defesa</h2>
+        <p class="card-hint">Vida sugerida = bases raça+classe + Corpo · Energia = bases + Alma · Esquiva sugerida = 6 + Destreza.</p>
+        <div class="grid-form two-col tight">
+          <label class="field"><span>Vida</span><input type="number" id="vida" min="0" step="1" /></label>
+          <label class="field"><span>Energia</span><input type="number" id="energia" min="0" step="1" /></label>
+          <label class="field"><span>Cicatrizes</span><input type="number" id="cicatrizes" min="0" max="9" step="1" value="0" /></label>
+          <label class="field"><span>Deslocamento (m)</span><input type="number" id="deslocamento" min="0" step="1" value="3" /></label>
+          <label class="field"><span>Bloqueio</span><input type="number" id="bloqueio" min="0" step="1" value="0" /></label>
+          <label class="field"><span>Esquiva</span><input type="number" id="esquiva" min="0" step="1" value="6" /></label>
+        </div>
+        <p class="hint" id="esquiva-sugestao"></p>
+        <button type="button" class="btn btn-secondary" id="btn-recalc">Recalcular vida / energia / esquiva sugerida</button>
+      </section>
+
+      <section class="card card-span-2">
+        <h2 class="card-title">Origens do personagem</h2>
+        <p class="card-hint">
+          Marque origens adicionais que o personagem possui. As de raça/classe vêm travadas.
+          Habilidades disponíveis exigem pelo menos uma origem da carta que você já possua, exceto
+          <strong>Origem: Livre</strong> ou tipo <strong>Treinamento</strong>.
+        </p>
+        <label class="field tight-field">
+          <span>Filtrar lista</span>
+          <input type="search" id="origens-busca" placeholder="Buscar origem…" autocomplete="off" />
+        </label>
+        <div class="origens-scroll" id="origens-grid"></div>
+      </section>
+
+      <section class="card card-span-2">
+        <h2 class="card-title">Deck de habilidades</h2>
+        <p class="card-hint" id="skills-filter-hint"></p>
+        <label class="field tight-field">
+          <span>Buscar habilidade</span>
+          <input type="search" id="skills-busca" placeholder="Nome…" autocomplete="off" />
+        </label>
+        <div class="dual-list">
+          <div class="dual-col">
+            <h3 class="sub-title">Disponíveis</h3>
+            <select id="skills-disponiveis" multiple size="12" class="dual-select"></select>
+          </div>
+          <div class="dual-actions">
+            <button type="button" class="btn btn-secondary" id="btn-skill-add" title="Adicionar selecionadas">&rarr;</button>
+            <button type="button" class="btn btn-secondary" id="btn-skill-remove" title="Remover selecionadas do deck">&larr;</button>
+          </div>
+          <div class="dual-col">
+            <h3 class="sub-title">No deck</h3>
+            <select id="skills-deck" multiple size="12" class="dual-select"></select>
+          </div>
+        </div>
+        <div class="skill-detail-wrap">
+          <h3 class="sub-title">Texto da habilidade selecionada</h3>
+          <p class="hint skill-detail-placeholder" id="skill-detail-placeholder">Clique numa habilidade em “Disponíveis” ou “No deck” para ver origem, custo e descrição completos.</p>
+          <div id="skill-detail-body" class="skill-detail-body hidden">
+            <div class="skill-detail-head">
+              <strong id="skill-detail-nome"></strong>
+              <span class="skill-detail-badge" id="skill-detail-tipo"></span>
+            </div>
+            <dl class="skill-meta" id="skill-detail-meta"></dl>
+            <div class="skill-detail-text" id="skill-detail-text"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card card-span-2">
+        <h2 class="card-title">Condições ativas</h2>
+        <p class="card-hint">Use o contador de acúmulos quando fizer sentido na mesa (ex.: Sangramento). O marcador “guia” indica se o export HTML citou acúmulos.</p>
+        <div class="cond-add-row">
+          <select id="cond-picker" class="cond-picker"></select>
+          <button type="button" class="btn btn-secondary" id="btn-cond-add">Adicionar</button>
+        </div>
+        <div id="condicoes-ativas" class="cond-ativas"></div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>Rascunho: armazenamento local (chave criadorFichaV2).</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="catalog.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

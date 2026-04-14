@@ -1,0 +1,1129 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Arqueólogo</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="331e66c8-f973-816b-9fa4-cf4a207a4e99" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📜</span></div><h1 class="page-title" dir="auto">Arqueólogo</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="331e66c8-f973-819e-99ba-c4ea55ff93c8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ef-8408-f0c5c22df446" class="">As habilidades do historiador irão envolver aprender sobre línguas, costumes, tecnologias, magias e cultura das sociedades antigas, eles também podem ir atrás de obter conhecimento sobre as origens das raças, classes, países e culturas atuais.</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8162-b106-ddfd8d0aa03f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8134-9581-d1c1fa9d2933" class="">Para dentro do sistema, o historiador deve ter vantagens em testes de conhecimento envolvendo história, devem ser capazes de aprender línguas antigas</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81af-8223-c99c495b3cc5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-816a-b813-ce2439e4e51f" class="">Técnica Característica:</p></div><div style="display:contents" dir="ltr"><figure id="331e66c8-f973-81d9-97fb-c61b3ef17b16" class="link-to-page"><a href="Arque%C3%B3logo/Conhecer%20o%20Passado%20331e66c8f97381d997fbc61b3ef17b16.html">Conhecer o Passado</a></figure></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8143-81f4-eb0502b3b1a5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8190-8a0f-d258fe0675e1" class="">Baralho de Técnicas:</p></div><div style="display:contents" dir="ltr"><figure id="331e66c8-f973-81c7-9acb-e14d60b48cdf" class="link-to-page"><a href="Arque%C3%B3logo/T%C3%A9cnicas%20do%20Arque%C3%B3logo%20331e66c8f97381c79acbe14d60b48cdf.html">Técnicas do Arqueólogo</a></figure></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-817f-819a-f9613a0d22a8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811a-8924-dee82bba8bb3" class="">Atributos iniciais:</p></div><div style="display:contents" dir="auto"><ul id="331e66c8-f973-81fe-bd35-d6b8909aac89" class="bulleted-list"><li style="list-style-type:disc">1 de conhecimento</li></ul></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e7-96c0-c25b2a76a914" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812d-bd6f-de4fe4d27d59" class="">Origens:</p></div><div style="display:contents" dir="auto"><ul id="331e66c8-f973-8175-ac56-daebae114642" class="bulleted-list"><li style="list-style-type:disc">Arqueólogo</li></ul></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ab-8243-ffcfbcd14bf1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8170-af1e-ecf4b400311d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c1-9d4a-dd63213ed812" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e4-aa73-c5713b675753" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810c-a4f4-fdd9a26d11a6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d7-9611-d7fb68c46fc4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8141-b26f-c7e76bedc806" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8101-960e-e2f4ee118b1c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8100-9025-ecdeee348bba" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8182-8033-c3d961caeaaa" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8123-a388-f7f5e524b35f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8132-ba6b-d3a05be7addf" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811b-a34b-f2589ca50c96" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81dc-ad3d-ec009201f8d3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81be-88b0-fdf084b5b573" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81cb-b706-f87f707c6470" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d0-a903-f386ade1d9bb" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810e-b808-f412648026af" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f7-9627-cbe342cbee31" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81aa-8839-c37921a551e3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-819c-9421-edbe82441453" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e7-a825-dbbbcefcc1bc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c8-988a-dd07b606d80c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811f-958c-cb85f68a27f8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-818a-9068-c081bd98c841" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8107-93ec-fb3904e83d6f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e2-a811-d2a75937bb57" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c8-9dda-e888fd31642d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e8-af23-d5a309180b93" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8187-8b7f-d6b260b7dfb1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-819b-8e8f-f2a6dfefcf51" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8180-a0ae-efc62d3672df" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81dc-bbad-dae5669cdf88" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8111-ba65-c3cfa62068b2" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8166-8cf7-c02a47c0bd87" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8106-904a-fdb46890f61d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d8-8a1a-f7c7e2abe709" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a1-9e07-da3e688bc566" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b8-b139-eb56b3105254" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-816c-8373-edfa7a75d00a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8138-97c2-f61d6b24b749" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8166-ae5b-ff1079da3a00" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811b-aeb5-fe7d825b60f4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a1-b346-de2c6d788e7d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8122-9c14-c25995746d3b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c8-a337-ebc31331d2af" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ee-a9b8-c458b5c9b82b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8192-93c2-f95e53dca84b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8194-b810-d9a2e2760547" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-816b-94a3-fb9eb19d38f0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c0-b00d-d2c0b77d1c53" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e9-896e-f89e857ba7cd" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-819c-98d2-d5e4bfa96085" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81aa-8a61-e1d70247e0d9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81df-a5c1-c9b3236ac64e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ff-b53a-dd148e1e5666" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812b-b0db-dce0afef1414" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81be-b771-d983e953f744" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8114-9958-d295c375be25" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8101-bc44-fc2e387e3cf0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ea-86a8-dc3fd8b4e2bf" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8168-9345-cf02a24bfc0a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-813f-8e1e-e948922519c8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a9-b9ff-e8dc28f7f957" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a2-802c-dd3d8b9e62f1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811d-a978-c212ab4f0c0e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810e-be07-fb88488e3d24" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8192-b7a8-ebc5e66c66a9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a1-bf91-fb1020b24710" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8138-9161-ffcd923de835" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8172-9644-e53f7e6697db" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b7-a0f3-c7d5fb99e6d7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ea-b169-de0b696b058c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f1-9faa-fc321c76df3a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8135-b934-c60a8fa801ae" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810d-ac73-e89865d44c5a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8140-8768-e340efafce16" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-815e-9cec-da8a68c622c3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8104-a4f8-ffec49564702" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f4-8d40-c24908be6041" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d0-8008-cab6354749f3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e9-b8ff-fdf767b0d4f9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f6-9ad5-f809e1c3611c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-816e-b538-c18268acf56a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812a-b315-c9abf5338e72" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e0-a5f2-db3bb670a098" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81df-a216-c79ea8a87504" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8188-82b8-d2a9c9a41e26" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8154-95f1-fec2bd39b7af" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8164-8d06-cf9caa5845c5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-815d-9313-e57f8ca90ef0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c3-bfbf-ca04bf3ef24d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8121-b684-d64170131acc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811e-8e6b-cdc11285e93e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8135-95c5-d146430be45e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8112-8016-d00f128d7a20" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811c-81a8-fc0343487038" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81df-896f-f118c8f0539a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8150-9add-f11c684f1dfe" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8184-98a8-e69f7d277d39" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a3-91e9-c82f91012835" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a0-9c43-e74365c2b0fd" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810f-9f92-d3dd9cb5f800" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8176-88fc-f1d9426b304a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8157-8eda-e172f472e065" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8100-86fe-fd62d159fcc6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8154-8f76-ca8a797a6c70" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c2-be9a-d35a98d12825" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8144-b0d9-e97ea1821baf" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8100-90f3-e29bec376fed" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8116-8c46-ce4f9eaa97c3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8132-9d93-ee036f1131ba" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8132-9cd2-d5db0824b977" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8112-b0eb-f3b9082c6edd" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-813e-8db4-f0cf4a33c3b3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f1-97ee-fd503f72309a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81dc-a4de-f8cbe2e7a300" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ca-8f9d-f69f6810a194" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8110-9c75-d48989bd5ef0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ba-91c4-d773b7e70dd6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8109-88e7-fc730ccc0ad8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8107-a224-e67ad319ece8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8155-b3c2-cf4e44477cc0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8113-851e-f4b530a15201" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8163-a91a-fa2cbc36486a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8127-9284-e6add25fc9ad" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-814d-b69a-e6eddba15a67" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8170-97dc-fa2e8bf73786" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f9-b1d4-f218197096f0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8152-9676-cb95e789803c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8197-bc51-cb9d509d2e08" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81dd-9494-cafd82178045" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8169-8f50-ccd8b24fb093" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8124-883f-d04be5e72e63" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810c-a88d-cc93d02650a4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ae-86b8-ce7a34edc2e6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f2-8043-ee9f22530c54" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f4-aebe-c8c2893d8b0d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ee-885e-e0f3de8cd203" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a7-a9d8-d77be5be2a2a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8193-a939-c20fda5d78f3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-815f-aec6-eec931388a1b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-814c-aa6d-c30059c95450" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d3-b640-fb3aca2a0098" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81fd-a838-d1dd631a2c3d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8184-a050-ee2975a05137" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81fc-8120-d7130c587de4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812c-9d44-d081e9cd50ab" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-813c-bd9d-cdc94bba7340" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81cf-9581-c12aa115ab30" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81bb-afd3-f93a31e406e8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8193-8d70-ef2ece489bd6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8130-b343-f9284072ebeb" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-819d-89ef-f2c3ee5c473f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8127-8f06-d42e3cd1a1a7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8192-9f98-c1223e92cde3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-819b-8644-cf6983530fbc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8179-a774-cb0336894db3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8174-99e4-d2802855b6c5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81fa-8b13-e2a5d9a10dc9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b1-98c1-ed974134ce46" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c2-8664-c7e389e430dc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a8-b7d5-ffd97728f29c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8105-9c70-cdce469e26d8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f8-9162-eb216159897a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8170-b1be-d6b23470b4ce" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ad-8787-efe12fa61111" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8190-b6a5-c9f0a5e301df" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810a-b9c1-c186927c2341" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b7-8353-f82007e45825" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8190-aa76-cfb0b0f82d77" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8171-898b-fb05e43b21d1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ff-ae61-f90b221c6665" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81fd-9af8-cfbc45198e86" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b2-b950-c2a2f1d050b7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f0-a783-f81d3ad30ee4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81bd-abf7-d684c81eb1f4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81fa-b6f0-d267eabb573a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e3-b76c-dcdafa0c1bab" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8176-8abc-e4496beef7e5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8104-a9d5-d863511218ed" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c1-860b-c5f7c124dec8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8142-a03b-c6d3dcbcc683" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81eb-a569-ff65243e389a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-817f-b53a-c7a855f64b0e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8114-927a-c3a007a5bd2c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8190-92fe-edd0a7c7311d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d7-8541-d0aeaf24f924" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8166-aa84-fbae0415256e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a9-ba21-ca0b39dcd378" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811b-9d86-e0ab650dc593" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8152-86c6-f98dd713aae6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-818f-a422-eecbc6e7ee44" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81be-b020-e6f7d07af216" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-816e-9887-f0a91bfd5796" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8125-8ba8-d967a31362d5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d4-8a9f-e529e03cd4f7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811c-b2da-edee799fe757" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-819e-95f7-fdb775430869" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811f-974b-e7729e77c179" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8183-b82a-e99a278cbd96" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8171-972a-c32334a2b582" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d7-aa86-fa351d6efef7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8197-bdb9-c4ad6a4c536c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8139-bd1e-e655ad0c4c4c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8124-b94c-ebc3a53b17d1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8136-bf67-ecb887681c1a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812c-b3d3-e67550f8676f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8131-9d09-fe3d084e7133" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8104-9355-ec7a8f47f788" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b8-b921-ec302c353118" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-818b-aae9-eb64818e2faa" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b9-9fee-fbe0959db094" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811d-b649-dcbab5e5dc59" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8112-b4ae-e23ed8871f5a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8142-a969-d58a3f7c7209" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8113-b8d1-cee3a2895246" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8112-a88f-edd4f6fd0b68" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8112-84ab-cacfdcaeaa74" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d2-911a-db13d073b538" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8167-84d8-f4b93c2ef48a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b9-8933-f2924a0bf073" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b5-b981-e3bb483b704d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81dd-ac90-e508a0ef1513" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8191-8f57-f267b3235071" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-813c-992d-c3341c520342" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d7-b511-e3119785b11e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8145-b399-f276e79efc97" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8194-987f-c4de0fa19983" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8198-aa47-d50ce98ed7ed" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8173-8f46-dd5818f4542d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-819f-bf53-e09fa4283901" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c6-a4ea-e9bbdee0b5cc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e4-a6a5-d8d5d0693716" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-817e-954d-d107dd712189" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8168-b9de-d1c90da51322" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8127-8355-d069b205da5b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811b-838f-d24cc4ccbb0e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8166-9ef9-c4c457016502" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8196-a3c3-d67dbd007065" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8120-938e-f7001a0bafa3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8147-b89c-ea938d70ceb4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81af-b76c-cb76d98f5612" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81df-9c68-ff733a9674bb" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8174-8d3f-eac4e711dfb2" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8141-9992-c11c94b37433" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8151-9cc2-deb7356ccd74" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81fd-b370-de848ef167c3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b0-b60e-ee79e60f48de" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ed-914e-ded78d550dae" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a8-bb69-d952687079ee" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-819c-b44e-e2d4439ae612" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8192-a25e-f2afc77a84e5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8104-90cd-e2a2957ff297" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b0-a0bf-ee97e62fe8d0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d5-8d52-e6c48de52791" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81da-ae96-dc000ffde05c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-813e-bb38-ca582e4ac87e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8122-b3f1-e3753156d2a7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-817a-8cb5-f00274caf279" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8173-94f4-ff31c1e7d3a6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8106-b177-e477fb5bbcce" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-814c-a8c7-de08a109ee68" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8159-bd95-e99dac667942" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8143-bfa4-ce69a5b3034c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b4-a5cd-d0245910c542" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8126-9243-ea94c217cb6b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8174-88fa-fea8b9059340" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c2-8d17-c565472d2786" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-817f-8e73-f6436ba93d18" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a7-a49e-fb945b5e31b6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ea-8d87-fd17f45c341d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8161-a986-f3909c9c1725" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811b-b037-e140e4fd72e0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8156-83f0-f64a6c300c13" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d7-8a8a-ef00ab3d152f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ad-9067-f4d29210df28" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811c-b446-db9a3692e303" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810b-909d-c7a9d225f886" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81bb-80f9-db79be41f87a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-814f-aeed-ddebb99ce637" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-817c-9a73-cec3271622f8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8142-99c5-cc91e12b8bdd" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f1-9069-fc9acd2427ed" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8179-a7fc-f6a9f9e03554" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8180-ae81-cc6414e6502a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81e5-9116-c8c46c5c734b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810e-80b6-f8fb31cc3ec8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c4-8edf-d7aa12631850" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8175-ad8f-c6b35596afb2" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8184-ba37-c64d707e7286" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8167-9fff-e62749034cef" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8167-b324-f5c89019ca09" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-814e-beae-c64b0049a281" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81fa-87fc-e22d0c9387fb" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c0-b076-f25df8358813" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8118-8fd8-d8d71491c351" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8112-89e3-f1e562c99c0e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8127-8e3d-c78f6ba23988" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f9-8c2f-c2599aaa25d8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b9-a6ad-e75b21d9e3a5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8196-b2b3-cc740371ddba" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8189-b176-ece5c77c1e65" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b1-b946-e630d769d295" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-813a-9a48-d4f29f060269" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8158-92fb-d61491f0982f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b2-933c-dcb7adb018d5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f3-94e7-d816ffc8c044" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c3-9764-e73606213e45" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8157-8f00-f938fc6ff5f3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81cb-8c5a-e0001efafccb" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81be-8f33-ef4035d6ce28" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-816a-9f3b-eb9208bd0245" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8111-8bfb-c0230cfee02e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8143-b4d9-cea09b86794b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8115-98ef-e10174dfef3c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8196-8082-dbb64404ff32" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b7-b31b-ed716d5eba74" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d1-a378-cf7a34ef7af5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812e-9452-ef37079dbb0a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-814c-b5c7-d950d676dc51" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8187-91b2-e2a66e3c5d06" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8112-853e-c75d83e5bbb2" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f1-a6bd-df654c6e02d7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81fe-a80f-e26db9ef2af9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8109-a0d6-e8d9655f0ba0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-815d-b9f0-e16c54587672" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81fa-8d54-c2f630a143d8" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f1-bb5c-e7c3078b5e3b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f7-b285-dac9091a7268" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8151-88b9-c46001ee3345" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81ca-a854-e0c3ab29d2a4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81cc-90a2-eae8fb2f180b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812b-aaab-d37eeb29a19c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a5-a199-e47a35c947f3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8103-bf44-d76847c9b678" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81bb-9aee-e2868d55b01c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-816b-82b5-fae9bf237e10" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81d3-8447-dc8fbd01a80d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c9-a869-ce456c92e98f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8149-8491-c7bf1d8b4270" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8103-b1ba-e3a00a1b6013" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812b-bb75-c860b877dfd4" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811e-a6ad-fe37c15e6a3d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8127-9a81-f4881a94beb1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-810f-a235-feb28b99e6f0" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8109-911e-e7a5b7ccc0f7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-815b-88a4-df8342581916" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812c-891f-e4e4419d3cef" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-813a-a0fc-f4c51350670e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8184-9ba4-ed3ac1fa128c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8139-93d3-f04ab4d441bf" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812c-a187-f20525290692" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-818a-a8a4-fd7ed68c316c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-818b-9e73-c84b8befb7d1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-811b-b38e-dcd208b96abe" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a6-80ad-cc0733d4ee0a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8195-be16-df51e192921c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8138-9671-d297a54e4a6f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a3-86d7-f6a2c3ff3a48" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-816d-8ddd-fb614ca9f705" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8169-8d61-f74b0ebd136c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c3-a5d4-ff7139703bbc" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81c0-964e-d7a81b483c61" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81be-aab1-dfd1ec937a8f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a2-845b-cba9001b301e" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-814f-a0ef-c5dae419721a" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81eb-905c-e6f2749676f5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81dd-80a9-d4ab46df2a9f" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b3-9067-d071846555fa" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8157-be75-d25d64f6e0a7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81cc-9ca5-d303b9b4045b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-816f-81cf-e1969c16627d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81a2-b62a-e1ca20e17c6c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f3-bfa8-e5c2033ae079" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8157-8b34-fb03ee105e2c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-812f-8612-d8679e1d272b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-8158-846c-cbaa86f54173" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81f2-b8d4-cf8422717169" class="">
+</p></div><div style="display:contents" dir="auto"><p id="331e66c8-f973-81b0-8f30-ce9f3fc194c6" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
