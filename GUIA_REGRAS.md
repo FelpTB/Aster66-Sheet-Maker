@@ -9,6 +9,7 @@ Documento de consulta para o aplicativo de **criação de fichas**. Sintetiza o 
 | Área | Caminho | Uso típico |
 |------|---------|------------|
 | Regras e listas (export Notion) | `Private & Shared/Guia do Jogador/` | Introdução, Sumário de Conceitos, Raças, Classes, Condições, Itens, árvore de Cartas em HTML |
+| Itens (export HTML) | `Private & Shared/.../Listas/Itens/Itens/*.html` | Fichas de item; gerado em `app/items.js` via `python app/build_items.py` |
 | Catálogo tabular | `Listas/.../Cartas *.csv` | Importação em massa (campos como Nome, Tipo, Modo de Uso, Origem, Custo, etc.) |
 | Cartas em texto simples | `Cartas/*.md` | Uma carta por arquivo; bom para parsing e UI (cabeçalho `# Nome` + propriedades) |
 
@@ -234,7 +235,7 @@ A página exportada `Criação de Ficha` está **mínima** (só esqueleto: nome,
 3. **Classe** → **Habilidade(s) característica(s)**, **Baralho de Habilidades**, atributos iniciais da classe, **vida/energia iniciais da classe**, **Origens** adicionais.
 4. **Distribuição/evolução** de atributos (treinamentos, nível — se a campanha usar progressão documentada nas cartas de treino).
 5. **Habilidades escolhidas** respeitando **Origem** e **Condição de aprendizado** das cartas.
-6. **Equipamentos** (modificam atributos; podem ter habilidades).
+6. **Equipamentos e inventário**: itens em **Em mãos / Equipado / Acesso rápido / Guardado**, respeitando espaços e tempos de acesso (uso ativo, passivo com ação para trocar, reação, ação).
 7. **Derivados**: vida/energia totais, reações, esquiva, bloqueio, deslocamento.
 8. **Condições ativas** / **cicatrizes** / **ligação** (se aplicável) em runtime, não necessariamente na criação.
 
@@ -250,15 +251,42 @@ A página exportada `Criação de Ficha` está **mínima** (só esqueleto: nome,
 
 ---
 
-## 13. Itens e equipamentos
+## 13. Itens, equipamentos e inventário
 
-- Modificam atributos; podem conceder habilidades passivas/ativas (ver Sumário **Equipamentos**).
+### 13.1 Tipos de espaço no inventário
+
+Cada item ocupa espaços numa de **quatro** categorias (quantidades iniciais de referência entre parênteses):
+
+| Zona | O que representa | Acesso / uso |
+|------|------------------|--------------|
+| **Em mãos** (inicial **2** espaços) | O que o personagem está segurando / manuseando agora. | Único espaço em que um item pode ser **usado ativamente** sem equipar ou buscar. |
+| **Equipado** (inicial **4** espaços) | Vestido ou preso ao corpo: armaduras, mochilas, amuletos, etc. | Em geral **efeitos passivos**. **Ação** para colocar ou retirar. Para uso ativo, o item costuma precisar estar **em mãos**. |
+| **Acesso rápido** (inicial **0** espaços) | Arma em coldre, munição à mostra, etc. | **Reação** para acessar. |
+| **Guardado** (inicial **4** espaços) | Mochila, alforjes, compartimentos fechados. | **Ação** para acessar. |
+
+O **número de espaços** em cada categoria depende de **equipamento**, **classe** e decisões de mesa; os valores iniciais acima são o padrão descrito nas regras atuais do projeto.
+
+### 13.2 Espaço ocupado por item
+
+Nas fichas de item (export *Listas → Itens*), o campo **“Qtd. por espaço”** indica quantas unidades daquele item cabem em **um** espaço de inventário. Na prática:
+
+- **Espaços gastos** = arredondar para cima `quantidade ÷ Qtd. por espaço` (mínimo 1 espaço se houver pelo menos 1 unidade).
+
+Ex.: 5 flechas com “Qtd. por espaço” 5 ocupam **1** espaço; 7 unidades do mesmo item ocupam **2** espaços.
+
+### 13.3 Campos úteis nas fichas de item (HTML / app)
+
+- **Tipo** (Arma, Consumível, Ferramenta, etc.), **Alcance** do uso do item, **Empunhadura** (quando aplicável), **Habilidade** (efeito mecânico resumido), **Tempo de uso**, **Preço unitário**, **Qtd. por espaço**, texto descritivo.
+
+### 13.4 Relação com personagem
+
+- Itens podem **modificar atributos** ou conceder **efeitos de habilidade** enquanto equipados ou carregados (ver Sumário **Equipamentos** e texto de cada item).
 
 ---
 
 ## 14. Sugestões para o aplicativo de ficha
 
-1. **Modelo de dados** alinhado aos campos do CSV + campos do Markdown (normalizar `Alcançe` → `Alcance`).
+1. **Modelo de dados** alinhado aos campos do CSV + campos do Markdown (normalizar `Alcançe` → `Alcance`); inventário com **Em mãos / Equipado / Acesso rápido / Guardado** e consumo de espaço a partir de **Qtd. por espaço** (`items.js`).
 2. **Validação de aprendizado**: filtrar cartas por **Origem** ∩ conjunto do personagem (classe + raça + outras fontes).
 3. **Calculadoras**: vida/energia/reações/esquiva conforme fórmulas deste guia.
 4. **Versionamento**: raças/classes com sufixo `✅` vs. `?` / pastas **Ideias** — tratar como “canônico” vs. “rascunho” na UI se fizer sentido para a mesa.
@@ -273,6 +301,7 @@ A página exportada `Criação de Ficha` está **mínima** (só esqueleto: nome,
 | Cena | Unidade de jogo/narrativa até mudar situação/contexto |
 | Origem | “Tags” de proveniência que liberam famílias de cartas |
 | Baralho de habilidades | Conjunto de onde o personagem pode aprender (por classe) |
+| Inventário (4 zonas) | Em mãos (uso ativo), Equipado (passivo; ação para trocar), Acesso rápido (reação), Guardado (ação); capacidade em “espaços” |
 | Golpe limpo | Ignora defesas por reação (Esquiva/Bloqueio) nas condições do guia |
 | Dano verdadeiro | Ignora Bloqueio; interage com Esquiva conforme texto |
 | Morrendo | Estado aos 0 PV com regras de cicatriz e remoção |

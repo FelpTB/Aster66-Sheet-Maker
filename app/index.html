@@ -16,7 +16,7 @@
       <span class="brand-icon" aria-hidden="true">◇</span>
       <div>
         <h1>Forja de Fichas</h1>
-        <p class="tagline">Ficha numa só vista · Catálogo: <code>python app/build_catalog.py</code> · Supabase em breve</p>
+        <p class="tagline">Ficha numa só vista · <code>python app/build_catalog.py</code> · <code>python app/build_items.py</code></p>
       </div>
     </div>
     <div class="top-actions">
@@ -58,6 +58,7 @@
             <div><dt>Energia</dt><dd id="hud-energia">—</dd></div>
             <div><dt>Deck</dt><dd id="hud-deck-count">0</dd></div>
             <div><dt>Origens ativas</dt><dd id="hud-origens-count">0</dd></div>
+            <div><dt>Inventário</dt><dd id="hud-inv-summary">—</dd></div>
           </dl>
         </div>
       </div>
@@ -120,22 +121,53 @@
       <section class="card card-span-2">
         <h2 class="card-title">Deck de habilidades</h2>
         <p class="card-hint" id="skills-filter-hint"></p>
-        <label class="field tight-field">
-          <span>Buscar habilidade</span>
-          <input type="search" id="skills-busca" placeholder="Nome…" autocomplete="off" />
-        </label>
+        <div class="skills-toolbar">
+          <label class="field tight-field skills-search-field">
+            <span>Buscar por nome</span>
+            <input type="search" id="skills-busca" placeholder="Nome da habilidade…" autocomplete="off" />
+          </label>
+          <div class="skills-filters-grid">
+            <label class="field tight-field">
+              <span>Origem</span>
+              <select id="skill-filter-origem" aria-label="Filtrar por origem"></select>
+            </label>
+            <label class="field tight-field">
+              <span>Modo de uso</span>
+              <select id="skill-filter-modo" aria-label="Filtrar por modo de uso"></select>
+            </label>
+            <label class="field tight-field">
+              <span>Tipo</span>
+              <select id="skill-filter-tipo" aria-label="Filtrar por tipo"></select>
+            </label>
+            <label class="field tight-field">
+              <span>Tempo de uso</span>
+              <select id="skill-filter-tempo" aria-label="Filtrar por tempo de uso"></select>
+            </label>
+          </div>
+          <button type="button" class="btn btn-ghost btn-sm" id="btn-skill-filters-clear">Limpar filtros</button>
+        </div>
         <div class="dual-list">
-          <div class="dual-col">
-            <h3 class="sub-title">Disponíveis</h3>
-            <select id="skills-disponiveis" multiple size="12" class="dual-select"></select>
+          <div class="dual-col dual-col-skills">
+            <div class="dual-col-head">
+              <h3 class="sub-title">Disponíveis</h3>
+              <span class="dual-col-count" id="skills-avail-count">0</span>
+            </div>
+            <div class="skill-pick-scroll" id="skills-avail-scroll">
+              <ul class="skill-pick-list" id="skills-avail-list" role="list"></ul>
+            </div>
           </div>
           <div class="dual-actions">
-            <button type="button" class="btn btn-secondary" id="btn-skill-add" title="Adicionar selecionadas">&rarr;</button>
-            <button type="button" class="btn btn-secondary" id="btn-skill-remove" title="Remover selecionadas do deck">&larr;</button>
+            <button type="button" class="btn btn-secondary" id="btn-skill-add" title="Adicionar marcadas">&rarr;</button>
+            <button type="button" class="btn btn-secondary" id="btn-skill-remove" title="Remover marcadas do deck">&larr;</button>
           </div>
-          <div class="dual-col">
-            <h3 class="sub-title">No deck</h3>
-            <select id="skills-deck" multiple size="12" class="dual-select"></select>
+          <div class="dual-col dual-col-skills">
+            <div class="dual-col-head">
+              <h3 class="sub-title">No deck</h3>
+              <span class="dual-col-count" id="skills-deck-count-label">0</span>
+            </div>
+            <div class="skill-pick-scroll" id="skills-deck-scroll">
+              <ul class="skill-pick-list skill-pick-list--deck" id="skills-deck-list" role="list"></ul>
+            </div>
           </div>
         </div>
         <div class="skill-detail-wrap">
@@ -148,6 +180,73 @@
             </div>
             <dl class="skill-meta" id="skill-detail-meta"></dl>
             <div class="skill-detail-text" id="skill-detail-text"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card card-span-2" aria-label="Inventário">
+        <h2 class="card-title">Inventário</h2>
+        <p class="card-hint">
+          Itens do guia (<strong>Listas → Itens</strong>): cada linha ocupa espaços conforme
+          <strong>quantidade ÷ Qtd. por espaço</strong> (arredondado para cima).
+          <strong>Em mãos</strong> é o único espaço onde o item pode ser <strong>usado ativamente</strong>;
+          em <strong>Equipado</strong> os efeitos costumam ser passivos (ação para trocar).
+          Ajuste os limites conforme armadura e classe.
+        </p>
+        <div class="grid-form four-col tight inv-slots-row">
+          <label class="field">
+            <span>Em mãos (espaços)</span>
+            <input type="number" id="inv-slot-em-maos" min="0" step="1" value="2" title="Uso ativo; inicial 2" />
+          </label>
+          <label class="field">
+            <span>Equipado (espaços)</span>
+            <input type="number" id="inv-slot-equipado" min="0" step="1" value="4" title="Passivo; ação para vestir/tirar; inicial 4" />
+          </label>
+          <label class="field">
+            <span>Acesso rápido (espaços)</span>
+            <input type="number" id="inv-slot-acesso-rapido" min="0" step="1" value="0" title="Acesso com reação; inicial 0" />
+          </label>
+          <label class="field">
+            <span>Guardado (espaços)</span>
+            <input type="number" id="inv-slot-guardado" min="0" step="1" value="4" title="Mochila etc.; ação; inicial 4" />
+          </label>
+        </div>
+        <p class="hint inv-cap-hint" id="inv-cap-hint"></p>
+        <div class="inv-add-bar">
+          <label class="field tight-field inv-add-grow">
+            <span>Buscar item</span>
+            <input type="search" id="inv-busca" placeholder="Nome do item…" autocomplete="off" />
+          </label>
+          <label class="field">
+            <span>Item</span>
+            <select id="inv-picker" class="inv-picker"></select>
+          </label>
+          <label class="field">
+            <span>Colocar em</span>
+            <select id="inv-add-slot">
+              <option value="emMaos">Em mãos</option>
+              <option value="equipado">Equipado</option>
+              <option value="acessoRapido">Acesso rápido</option>
+              <option value="guardado" selected>Guardado</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Qtd.</span>
+            <input type="number" id="inv-add-qtd" min="1" step="1" value="1" />
+          </label>
+          <button type="button" class="btn btn-secondary" id="btn-inv-add">Adicionar</button>
+        </div>
+        <div class="inv-columns" id="inv-columns"></div>
+        <div class="skill-detail-wrap inv-item-detail">
+          <h3 class="sub-title">Detalhe do item selecionado</h3>
+          <p class="hint skill-detail-placeholder" id="inv-detail-placeholder">Clique numa linha do inventário para ver tipo, efeito e texto do guia.</p>
+          <div id="inv-detail-body" class="skill-detail-body hidden">
+            <div class="skill-detail-head">
+              <strong id="inv-detail-nome"></strong>
+              <span class="skill-detail-badge" id="inv-detail-tipo"></span>
+            </div>
+            <dl class="skill-meta" id="inv-detail-meta"></dl>
+            <div class="skill-detail-text" id="inv-detail-text"></div>
           </div>
         </div>
       </section>
@@ -170,6 +269,7 @@
 
   <script src="data.js"></script>
   <script src="catalog.js"></script>
+  <script src="items.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
